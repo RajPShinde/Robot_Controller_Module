@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="md_README" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>Robot Controller Module</title>
+    <detaileddescription>
+<para><ulink url="https://travis-ci.org/RajPShinde/Robot_Controller_Module"></ulink> <ulink url="https://coveralls.io/github/RajPShinde/Robot_Controller_Module?branch=master"></ulink> https://github.com/RajPShinde/Robot_Controller_Module/blob/master/LICENSE.md &quot;![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)&quot; <heading level="2">[]() </heading>
+</para><para><heading level="2">Authors</heading>
+</para><para><itemizedlist>
+<listitem><para><bold>Raj Prakash Shinde</bold> - <emphasis>Sprint 1- Driver &amp; Sprint 2- Navigator</emphasis> - <ulink url="https://github.com/RajPShinde">GitHub</ulink> <linebreak/>
+I am a Masters in Robotics Engineering student at the University of Maryland, College Park.</para></listitem><listitem><para><bold>Prasheel Renkuntla</bold> - <emphasis>Sprint 1- Navigator &amp; Sprint 2- Driver</emphasis> - <ulink url="https://github.com/Prasheel24">GitHub</ulink> <linebreak/>
+To be added</para></listitem></itemizedlist>
+</para><para><heading level="2">Overview</heading>
+</para><para>This is a controller module for a robot that uses an Ackermann Steering Model, This controller is to be implemented in a four wheeled Robot made by ACME Robotics.</para><para><heading level="2">Description</heading>
+</para><para>A controller is build for a 4 wheeled robot with an Ackermann steering to navigate through its environment. The controller consist of a PID algorithm which ensures that the velocity converges to the set point, and a Steer Algorithm that helps the robot turn. <linebreak/>
+The PID Algorithm is a control loop mechanism that calculates the error and applies correction through proportional, integral and derivative gains. The Steer Algorithm is developed to turn the robot, which is done by calculating the length of an arc inscribed between the current robot heading and target heading, the length when divided by the robot velocity gives the time for which the wheels need to be kept at angles given by Ackermann steering Model. <linebreak/>
+The input to the controller will be provided by the perception model developed by the ACME Robotics. <linebreak/>
+The Demonstration of the controller will be given by plotting a graph that shows convergence of velocity &amp; Heading angle to the targets with respect to time.</para><para><heading level="2">Agile Iterative Process Log</heading>
+</para><para>Log- <ulink url="https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8SvvfyJjY/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8SvvfyJjY/edit?usp=sharing</ulink></para><para><heading level="2">Dependencies</heading>
+</para><para><orderedlist>
+<listitem><para>C++ 11</para></listitem><listitem><para>gnuplot Install gnuplot <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>gnuplot</highlight></codeline>
+</programlisting></para></listitem></orderedlist>
+</para><para><heading level="2">TODO</heading>
+</para><para><itemizedlist>
+<listitem><para>Update the AIP spreadsheet.</para></listitem><listitem><para>Implementation of the Functions.</para></listitem><listitem><para>Display Output on Graph.</para></listitem><listitem><para>Make sure that all the Test are passed.</para></listitem><listitem><para>Update UML Diagrams.</para></listitem><listitem><para>Check for cpplint and cppcheck errors and paste output in results.</para></listitem></itemizedlist>
+</para><para>## Build <programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>--recursive<sp/>https://github.com/RajPShinde/Robot_Controller_Module.git</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>&lt;path<sp/>to<sp/>repository&gt;</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+</programlisting> <heading level="2">Run</heading>
+</para><para>#### Run Program <programlisting><codeline><highlight class="normal">./app/shell-app</highlight></codeline>
+</programlisting> #### Run Test <programlisting><codeline><highlight class="normal">./test/cpp-test</highlight></codeline>
+</programlisting> <heading level="2">Demo</heading>
+</para><para>To Be Added</para><para><heading level="2">Result</heading>
+</para><para>To Be Added</para><para><heading level="2">Bugs</heading>
+</para><para>None</para><para><heading level="2">References</heading>
+</para><para><itemizedlist>
+<listitem><para>Ackermann Steering- <ulink url="https://www.sciencedirect.com/topics/engineering/ackermann">https://www.sciencedirect.com/topics/engineering/ackermann</ulink></para></listitem><listitem><para>PID Controller- <ulink url="https://en.wikipedia.org/wiki/PID_controller">https://en.wikipedia.org/wiki/PID_controller</ulink> </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>
