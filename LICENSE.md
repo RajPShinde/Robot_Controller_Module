@@ -1,3 +1,5 @@
+MIT License
+
 Copyright © 2019 Raj Shinde
 
 Permission is hereby granted, free of charge, to any person

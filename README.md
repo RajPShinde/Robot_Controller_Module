@@ -16,7 +16,7 @@
 This is a controller module for a robot that uses an Ackermann Steering Model, This controller is to be implemented in a four wheeled Robot made by ACME Robotics.
 
 ## Description
-<br>A controller is build for a 4 wheeled robot with an Ackermann steering to navigate through its environment. The controller consist of a PID algorithm which  ensures that the velocity converges to the set point, and a Steer Algorithm that helps the robot turn.
+A controller is build for a 4 wheeled robot with an Ackermann steering to navigate through its environment. The controller consist of a PID algorithm which  ensures that the velocity converges to the set point, and a Steer Algorithm that helps the robot turn.
 <br>The PID Algorithm is a control loop mechanism that calculates the error and applies correction through proportional, integral and derivative gains. The Steer Algorithm is developed to turn the robot, which is done by calculating the length of an arc inscribed between the current robot heading and target heading, the length when divided by the robot velocity gives the time for which the wheels need to be kept at angles given by Ackermann steering Model.
 <br>The input to the controller will be provided by the perception model developed by the ACME Robotics.
 <br>The Demonstration of the controller will be given by plotting a graph that shows convergence of velocity & Heading angle to the targets with respect to time.
@@ -26,10 +26,10 @@ Log- https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8
 
 ## Dependencies
 1. C++ 11
-2. GNUplot
-Download gnuplot
+2. gnuplot
+Install gnuplot
 ```
-git clone https://github.com/dstahlke/gnuplot-iostream.git
+sudo apt-get install gnuplot
 ```
 
 ## TODO
