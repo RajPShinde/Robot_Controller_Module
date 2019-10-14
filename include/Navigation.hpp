@@ -45,8 +45,8 @@ OTHER DEALINGS IN THE SOFTWARE.
  */
 class Navigation : public SteerAlgorithm {
  private:
-    double kp_, ki_, kd_, diffTime, error, previousError;
-    const double maxMotorSpeed = 60;
+    double kp_, ki_, kd_, diffTime_, error_, previousError_;
+    const double maxMotorSpeed_ = 60;
 
  public:
     bool motorDirection = true;
@@ -62,7 +62,7 @@ class Navigation : public SteerAlgorithm {
     ~Navigation();
 
    /**
-    *  @brief Function to calculate new velocity with a PID 
+    *  @brief Function to calculate new velocity in m/s with a PID 
     *  Algorithm using kp, ki & kd
     *  @param double currentVelocity, current velocity of robot
     *  @param double setPoint, Target Velocity
