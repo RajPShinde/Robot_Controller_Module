@@ -21,11 +21,52 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
  *************************************************************************/
 
-#pragma once
+/**
+ *  @copyright MIT License, Copyright © 2019 Raj Shinde
+ *  @file    SteerAlgorithm.cpp
+ *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
+ *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
+ *  @date    10/10/2019
+ *  @version 1.0
+ *  @brief   Mid Term Project
+ *  @section
+ */
 
-#include<iostream>
+#include <iostream>
 
-void dummy()
-{
-    std::cout << "HI" << std::endl;
+#include "SteerAlgorithm.hpp"
+
+SteerAlgorithm::SteerAlgorithm() {
+ 	lWheelAngle_ = 0;
+ 	rWheelAngle_ = 0;
+ 	heading_ = 0;
+ 	robotAngle_ = 0;
+ 	corrRadius_ = 10;
 }
+
+SteerAlgorithm::~SteerAlgorithm() {}
+
+double SteerAlgorithm::getCorrRadius_(){
+return 20;
+}
+
+bool SteerAlgorithm::setCorrRadius_(double r){
+return false;
+}
+
+double SteerAlgorithm::arcLength(double diffAngle, double corrRadius) {
+return 100;
+}
+
+double SteerAlgorithm::changeWheelAngles(double corrRadius, double shaftLength, double shaftDistance){
+return 50;
+}
+
+bool SteerAlgorithm::resetWheel() {
+return false;
+}
+
+double SteerAlgorithm::turnTime(double arclength, double newVelocity) {
+return -100;
+}
+

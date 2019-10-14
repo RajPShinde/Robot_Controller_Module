@@ -1,5 +1,4 @@
 #[[
-/************************************************************************
 Copyright © 2019 Raj Shinde
 
 Permission is hereby granted, free of charge, to any person
@@ -20,7 +19,6 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
- *************************************************************************/
 ]]
 
 cmake_minimum_required(VERSION 3.2.1)
@@ -36,7 +34,7 @@ if (COVERAGE)
     include(CodeCoverage)
     set(LCOV_REMOVE_EXTRA "'vendor/*'")
     setup_target_for_coverage(code_coverage test/cpp-test coverage)
-    set(COVERAGE_SRCS app/main.cpp include/lib.hpp)
+    set(COVERAGE_SRCS app/main.cpp app/Navigation.cpp app/SteerAlgorithm.cpp include/Navigation.hpp include/SteerAlgorithm.hpp)
 
     SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
     SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")

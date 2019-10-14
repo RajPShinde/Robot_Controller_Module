@@ -1,5 +1,4 @@
 #[[
-/************************************************************************
 Copyright © 2019 Raj Shinde
 
 Permission is hereby granted, free of charge, to any person
@@ -20,15 +19,16 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
- *************************************************************************/
 ]]
-
+ 
 set(GTEST_SHUFFLE 1)
 
 add_executable(
     cpp-test
     main.cpp
     test.cpp
+    ../app/Navigation.cpp
+    ../app/SteerAlgorithm.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 

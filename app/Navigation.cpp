@@ -23,7 +23,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 /**
  *  @copyright MIT License, Copyright © 2019 Raj Shinde
- *  @file    main.cpp
+ *  @file    Navigation.cpp
  *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
  *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
  *  @date    10/10/2019
@@ -32,14 +32,46 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @section
  */
 
-#include <gtest/gtest.h>
+#include <iostream>
 
-/**
- *  @brief  Main Function for running tests
- *  @param  int argc, char argv
- *  @return int
- */
-int main(int argc, char** argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+#include "Navigation.hpp"
+
+Navigation::Navigation() {
+kp_ = 0.5;
+ki_ = 0.05;
+kd_ = 0.001;
+diffTime = 0.002;
+error = 0; 
+previousError = 0;
 }
+
+Navigation::~Navigation() {}
+
+double Navigation::calculate(double currentVelocity, double setPoint, int flag) {
+return 100;
+}
+
+double Navigation::getKp_() {
+return 10;
+}
+
+double Navigation::getKi_() {
+return 10;
+}
+
+double Navigation::getKd_() {
+return 10;
+}
+
+bool Navigation::setKp_(double kp) {
+return false;
+}
+
+bool Navigation::setKi_(double ki) {
+return false;
+}
+
+bool Navigation::setKd_(double kd) {
+return false;
+}
+

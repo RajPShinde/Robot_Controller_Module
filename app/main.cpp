@@ -21,11 +21,27 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
  *************************************************************************/
 
-#include <iostream>
-#include <lib.hpp>
+/**
+ *  @copyright MIT License, Copyright © 2019 Raj Shinde
+ *  @file    main.cpp
+ *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
+ *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
+ *  @date    10/10/2019
+ *  @version 1.0
+ *  @brief   Mid Term Project
+ *  @section
+ */
 
-int main()
-{
-    dummy();
-    return 0;
+#include <iostream>
+
+#include "Navigation.hpp"
+#include "SteerAlgorithm.hpp"
+
+/**
+ *  @brief  Main Function to call the methods and show demostration
+ *  @param  None
+ *  @return 0
+ */
+int main() {
+return 0;
 }
