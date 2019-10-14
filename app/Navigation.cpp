@@ -42,9 +42,9 @@ Navigation::Navigation() {
 kp_ = 0.5;
 ki_ = 0.05;
 kd_ = 0.001;
-diffTime = 0.002;
-error = 0;
-previousError = 0;
+diffTime_ = 0.002;
+error_ = 0;
+previousError_ = 0;
 }
 
 Navigation::~Navigation() {}

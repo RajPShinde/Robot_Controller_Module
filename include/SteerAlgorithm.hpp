@@ -61,21 +61,21 @@ class SteerAlgorithm {
     ~SteerAlgorithm();
 
    /**
-    *  @brief Function to get corresponding radius
+    *  @brief Function to get corresponding radius in meters
     *  @param none
     *  @return double corresponding radius
     */
     double getCorrRadius_();
 
    /**
-    *  @brief Function to set corresponding radius
+    *  @brief Function to set corresponding radius in meters
     *  @param double radius
     *  @return bool true
     */
     bool setCorrRadius_(double r);
 
    /**
-    *  @brief Function to calculate the length of arc
+    *  @brief Function to calculate the length of arc in meters
     *  to be traced in order to head in target direction
     *  @param double diffAngle, difference in current and 
     *  target heading
@@ -85,7 +85,7 @@ class SteerAlgorithm {
     double arcLength(double diffAngle, double corrRadius);
 
    /**
-    *  @brief Function to calculate the angles for left and
+    *  @brief Function to calculate the angles in degrees for left and
     *  right wheels as per ackermann model, and then feed them
     *  to corresponding servos
     *  @param double corrRadius, corresponding radius
@@ -105,8 +105,8 @@ class SteerAlgorithm {
     bool resetWheel();
 
    /**
-    *  @brief Function to calculate time required to turn or keep
-    *  wheels at the an angle
+    *  @brief Function to calculate time in seconds required to
+    *  turn or keep wheels at the an angle
     *  @param double arcLength, length of arc to be traced
     *  @param double newVelocity, velocity
     *  @return double dummyWheelAngle
