@@ -1,0 +1,185 @@
+.TH "Navigation" 3 "Mon Oct 14 2019" "Version 1.0" "Robot Controller Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Navigation \- Class \fBNavigation\fP Contains the methods of Pid Algorithm\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Navigation\&.hpp>\fP
+.PP
+Inherits \fBSteerAlgorithm\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNavigation\fP ()"
+.br
+.RI "\fIConstructor of class \fBNavigation\fP\&. \fP"
+.ti -1c
+.RI "\fB~Navigation\fP ()"
+.br
+.RI "\fIDestructor of class \fBNavigation\fP\&. \fP"
+.ti -1c
+.RI "double \fBcalculate\fP (double currentVelocity, double setPoint, int flag)"
+.br
+.RI "\fIFunction to calculate new velocity with a PID Algorithm using kp, ki & kd\&. \fP"
+.ti -1c
+.RI "double \fBgetKp_\fP ()"
+.br
+.RI "\fIFunction to get kp_\&. \fP"
+.ti -1c
+.RI "double \fBgetKi_\fP ()"
+.br
+.RI "\fIFunction to get ki_\&. \fP"
+.ti -1c
+.RI "double \fBgetKd_\fP ()"
+.br
+.RI "\fIFunction to get kd_\&. \fP"
+.ti -1c
+.RI "bool \fBsetKp_\fP (double kp)"
+.br
+.RI "\fIFunction to set kp_\&. \fP"
+.ti -1c
+.RI "bool \fBsetKi_\fP (double ki)"
+.br
+.RI "\fIFunction to set ki_\&. \fP"
+.ti -1c
+.RI "bool \fBsetKd_\fP (double kd)"
+.br
+.RI "\fIFunction to set kd_\&. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBmotorDirection\fP = true"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBNavigation\fP Contains the methods of Pid Algorithm\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "double Navigation::calculate (double currentVelocity, double setPoint, int flag)"
+
+.PP
+Function to calculate new velocity with a PID Algorithm using kp, ki & kd\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdouble\fP currentVelocity, current velocity of robot 
+.br
+\fIdouble\fP setPoint, Target Velocity 
+.br
+\fIint\fP flag, to enable while 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+double neVelocity 
+.RE
+.PP
+
+.SS "double Navigation::getKd_ ()"
+
+.PP
+Function to get kd_\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+double 
+.RE
+.PP
+
+.SS "double Navigation::getKi_ ()"
+
+.PP
+Function to get ki_\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+double 
+.RE
+.PP
+
+.SS "double Navigation::getKp_ ()"
+
+.PP
+Function to get kp_\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+double 
+.RE
+.PP
+
+.SS "bool Navigation::setKd_ (double kd)"
+
+.PP
+Function to set kd_\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdouble\fP kd 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+boolean true 
+.RE
+.PP
+
+.SS "bool Navigation::setKi_ (double ki)"
+
+.PP
+Function to set ki_\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdouble\fP ki 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+boolean true 
+.RE
+.PP
+
+.SS "bool Navigation::setKp_ (double kp)"
+
+.PP
+Function to set kp_\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdouble\fP kp 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+boolean true 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

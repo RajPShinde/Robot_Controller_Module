@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Robot<sp/>Controller<sp/>Module</highlight></codeline>
+<codeline><highlight class="normal">[![Build<sp/>Status](https://travis-ci.org/RajPShinde/Robot_Controller_Module.svg?branch=master)](https://travis-ci.org/RajPShinde/Robot_Controller_Module)</highlight></codeline>
+<codeline><highlight class="normal">[![Coverage<sp/>Status](https://coveralls.io/repos/github/RajPShinde/Robot_Controller_Module/badge.svg?branch=master)](https://coveralls.io/github/RajPShinde/Robot_Controller_Module?branch=master)</highlight></codeline>
+<codeline><highlight class="normal">[![License<sp/>MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/RajPShinde/Robot_Controller_Module/blob/master/LICENSE.md)</highlight></codeline>
+<codeline><highlight class="normal">[![Documentation](https://img.shields.io/badge/docs-generated-brightgreen.svg)]()</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Authors</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Raj<sp/>Prakash<sp/>Shinde**<sp/>-<sp/>*Sprint<sp/>1-<sp/>Driver<sp/>&amp;<sp/>Sprint<sp/>2-<sp/>Navigator*<sp/>-<sp/>[GitHub](https://github.com/RajPShinde)</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;I<sp/>am<sp/>a<sp/>Masters<sp/>in<sp/>Robotics<sp/>Engineering<sp/>student<sp/>at<sp/>the<sp/>University<sp/>of<sp/>Maryland,<sp/>College<sp/>Park.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**Prasheel<sp/>Renkuntla**<sp/>-<sp/>*Sprint<sp/>1-<sp/>Navigator<sp/>&amp;<sp/>Sprint<sp/>2-<sp/>Driver*<sp/>-<sp/>[GitHub](https://github.com/Prasheel24)</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;To<sp/>be<sp/>added</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Overview</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>a<sp/>controller<sp/>module<sp/>for<sp/>a<sp/>robot<sp/>that<sp/>uses<sp/>an<sp/>Ackermann<sp/>Steering<sp/>Model,<sp/>This<sp/>controller<sp/>is<sp/>to<sp/>be<sp/>implemented<sp/>in<sp/>a<sp/>four<sp/>wheeled<sp/>Robot<sp/>made<sp/>by<sp/>ACME<sp/>Robotics.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Description</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>controller<sp/>is<sp/>build<sp/>for<sp/>a<sp/>4<sp/>wheeled<sp/>robot<sp/>with<sp/>an<sp/>Ackermann<sp/>steering<sp/>to<sp/>navigate<sp/>through<sp/>its<sp/>environment.<sp/>The<sp/>controller<sp/>consist<sp/>of<sp/>a<sp/>PID<sp/>algorithm<sp/>which<sp/><sp/>ensures<sp/>that<sp/>the<sp/>velocity<sp/>converges<sp/>to<sp/>the<sp/>set<sp/>point,<sp/>and<sp/>a<sp/>Steer<sp/>Algorithm<sp/>that<sp/>helps<sp/>the<sp/>robot<sp/>turn.</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;The<sp/>PID<sp/>Algorithm<sp/>is<sp/>a<sp/>control<sp/>loop<sp/>mechanism<sp/>that<sp/>calculates<sp/>the<sp/>error<sp/>and<sp/>applies<sp/>correction<sp/>through<sp/>proportional,<sp/>integral<sp/>and<sp/>derivative<sp/>gains.<sp/>The<sp/>Steer<sp/>Algorithm<sp/>is<sp/>developed<sp/>to<sp/>turn<sp/>the<sp/>robot,<sp/>which<sp/>is<sp/>done<sp/>by<sp/>calculating<sp/>the<sp/>length<sp/>of<sp/>an<sp/>arc<sp/>inscribed<sp/>between<sp/>the<sp/>current<sp/>robot<sp/>heading<sp/>and<sp/>target<sp/>heading,<sp/>the<sp/>length<sp/>when<sp/>divided<sp/>by<sp/>the<sp/>robot<sp/>velocity<sp/>gives<sp/>the<sp/>time<sp/>for<sp/>which<sp/>the<sp/>wheels<sp/>need<sp/>to<sp/>be<sp/>kept<sp/>at<sp/>angles<sp/>given<sp/>by<sp/>Ackermann<sp/>steering<sp/>Model.</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;The<sp/>input<sp/>to<sp/>the<sp/>controller<sp/>will<sp/>be<sp/>provided<sp/>by<sp/>the<sp/>perception<sp/>model<sp/>developed<sp/>by<sp/>the<sp/>ACME<sp/>Robotics.</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;The<sp/>Demonstration<sp/>of<sp/>the<sp/>controller<sp/>will<sp/>be<sp/>given<sp/>by<sp/>plotting<sp/>a<sp/>graph<sp/>that<sp/>shows<sp/>convergence<sp/>of<sp/>velocity<sp/>&amp;<sp/>Heading<sp/>angle<sp/>to<sp/>the<sp/>targets<sp/>with<sp/>respect<sp/>to<sp/>time.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Agile<sp/>Iterative<sp/>Process<sp/>Log</highlight></codeline>
+<codeline><highlight class="normal">Log-<sp/>https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8SvvfyJjY/edit?usp=sharing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Dependencies</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>C++<sp/>11</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>gnuplot</highlight></codeline>
+<codeline><highlight class="normal">Install<sp/>gnuplot</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>gnuplot</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>TODO</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Update<sp/>the<sp/>AIP<sp/>spreadsheet.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Implementation<sp/>of<sp/>the<sp/>Functions.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Display<sp/>Output<sp/>on<sp/>Graph.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Make<sp/>sure<sp/>that<sp/>all<sp/>the<sp/>Test<sp/>are<sp/>passed.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Update<sp/>UML<sp/>Diagrams.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Check<sp/>for<sp/>cpplint<sp/>and<sp/>cppcheck<sp/>errors<sp/>and<sp/>paste<sp/>output<sp/>in<sp/>results.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Build</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>--recursive<sp/>https://github.com/RajPShinde/Robot_Controller_Module.git</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>&lt;path<sp/>to<sp/>repository&gt;</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Run</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Run<sp/>Program</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">./app/shell-app</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Run<sp/>Test</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">./test/cpp-test</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Demo</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>Be<sp/>Added</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Result</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>Be<sp/>Added</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Bugs</highlight></codeline>
+<codeline><highlight class="normal">None</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>References</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Ackermann<sp/>Steering-<sp/>https://www.sciencedirect.com/topics/engineering/ackermann</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>PID<sp/>Controller-<sp/>https://en.wikipedia.org/wiki/PID_controller</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

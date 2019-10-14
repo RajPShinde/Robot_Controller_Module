@@ -1,0 +1,119 @@
+.TH "md__r_e_a_d_m_e" 3 "Mon Oct 14 2019" "Version 1.0" "Robot Controller Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__r_e_a_d_m_e \- Robot Controller Module 
+\fC\fP \fC\fP \fBhttps:\fP//github\&.com/RajPShinde/Robot_Controller_Module/blob/master/LICENSE\&.md '![License MIT](https://img\&.shields\&.io/badge/License-MIT-brightgreen\&.svg)' 
+.SS "[]() "
+.PP
+.SS "Authors"
+.PP
+.IP "\(bu" 2
+\fBRaj Prakash Shinde\fP - \fISprint 1- Driver & Sprint 2- Navigator\fP - \fCGitHub\fP 
+.br
+I am a Masters in Robotics Engineering student at the University of Maryland, College Park\&.
+.IP "\(bu" 2
+\fBPrasheel Renkuntla\fP - \fISprint 1- Navigator & Sprint 2- Driver\fP - \fCGitHub\fP 
+.br
+To be added
+.PP
+.PP
+.SS "Overview"
+.PP
+This is a controller module for a robot that uses an Ackermann Steering Model, This controller is to be implemented in a four wheeled Robot made by ACME Robotics\&.
+.PP
+.SS "Description"
+.PP
+A controller is build for a 4 wheeled robot with an Ackermann steering to navigate through its environment\&. The controller consist of a PID algorithm which ensures that the velocity converges to the set point, and a Steer Algorithm that helps the robot turn\&. 
+.br
+The PID Algorithm is a control loop mechanism that calculates the error and applies correction through proportional, integral and derivative gains\&. The Steer Algorithm is developed to turn the robot, which is done by calculating the length of an arc inscribed between the current robot heading and target heading, the length when divided by the robot velocity gives the time for which the wheels need to be kept at angles given by Ackermann steering Model\&. 
+.br
+The input to the controller will be provided by the perception model developed by the ACME Robotics\&. 
+.br
+The Demonstration of the controller will be given by plotting a graph that shows convergence of velocity & Heading angle to the targets with respect to time\&.
+.PP
+.SS "Agile Iterative Process Log"
+.PP
+Log- https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8SvvfyJjY/edit?usp=sharing
+.PP
+.SS "Dependencies"
+.PP
+.IP "1." 4
+C++ 11
+.IP "2." 4
+gnuplot Install gnuplot 
+.PP
+.nf
+1 sudo apt-get install gnuplot
+
+.fi
+.PP
+
+.PP
+.PP
+.SS "TODO"
+.PP
+.IP "\(bu" 2
+Update the AIP spreadsheet\&.
+.IP "\(bu" 2
+Implementation of the Functions\&.
+.IP "\(bu" 2
+Display Output on Graph\&.
+.IP "\(bu" 2
+Make sure that all the Test are passed\&.
+.IP "\(bu" 2
+Update UML Diagrams\&.
+.IP "\(bu" 2
+Check for cpplint and cppcheck errors and paste output in results\&.
+.PP
+.PP
+## Build 
+.PP
+.nf
+1 git clone --recursive https://github\&.com/RajPShinde/Robot_Controller_Module\&.git
+2 cd <path to repository>
+3 mkdir build
+4 cd build
+5 cmake \&.\&.
+6 make
+
+.fi
+.PP
+ 
+.SS "Run"
+.PP
+#### Run Program 
+.PP
+.nf
+1 \&./app/shell-app
+
+.fi
+.PP
+ #### Run Test 
+.PP
+.nf
+1 \&./test/cpp-test
+
+.fi
+.PP
+ 
+.SS "Demo"
+.PP
+To Be Added
+.PP
+.SS "Result"
+.PP
+To Be Added
+.PP
+.SS "Bugs"
+.PP
+None
+.PP
+.SS "References"
+.PP
+.IP "\(bu" 2
+Ackermann Steering- https://www.sciencedirect.com/topics/engineering/ackermann
+.IP "\(bu" 2
+PID Controller- https://en.wikipedia.org/wiki/PID_controller 
+.PP
+
