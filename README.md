@@ -10,22 +10,26 @@
 * **Raj Prakash Shinde** - *Sprint 1- Driver & Sprint 2- Navigator* - [GitHub](https://github.com/RajPShinde)
 <br>I am a Masters in Robotics Engineering student at the University of Maryland, College Park.
 * **Prasheel Renkuntla** - *Sprint 1- Navigator & Sprint 2- Driver* - [GitHub](https://github.com/Prasheel24)
-<br>
+<br>To be added
 
 ## Overview
-This is a controller module for a robot that uses an Ackermann Steering Model, for the Robot made by ACME Robotics.
+This is a controller module for a robot that uses an Ackermann Steering Model, This controller is to be implemented in a four wheeled Robot made by ACME Robotics.
 
 ## Description
+<br>A controller is build for a 4 wheeled robot with an Ackermann steering to navigate through its environment. The controller consist of a PID algorithm which  ensures that the velocity converges to the set point, and a Steer Algorithm that helps the robot turn.
+<br>The PID Algorithm is a control loop mechanism that calculates the error and applies correction through proportional, integral and derivative gains. The Steer Algorithm is developed to turn the robot, which is done by calculating the length of an arc inscribed between the current robot heading and target heading, the length when divided by the robot velocity gives the time for which the wheels need to be kept at angles given by Ackermann steering Model.
+<br>The input to the controller will be provided by the perception model developed by the ACME Robotics.
+<br>The Demonstration of the controller will be given by plotting a graph that shows convergence of velocity & Heading angle to the targets with respect to time.
 
 ## Agile Iterative Process Log
-[Log- ](https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8SvvfyJjY/edit?usp=sharing)
+Log- https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8SvvfyJjY/edit?usp=sharing
 
 ## Dependencies
 1. C++ 11
-2. GNUPplot
-* Install GNUplot
+2. GNUplot
+Download gnuplot
 ```
-sudo apt-get install GNUplot-iostream
+git clone https://github.com/dstahlke/gnuplot-iostream.git
 ```
 
 ## TODO
@@ -65,3 +69,4 @@ None
 
 ## References
 * Ackermann Steering- https://www.sciencedirect.com/topics/engineering/ackermann
+* PID Controller- https://en.wikipedia.org/wiki/PID_controller
