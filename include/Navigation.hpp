@@ -47,6 +47,7 @@ class Navigation : public SteerAlgorithm {
  private:
     double kp_, ki_, kd_, diffTime, error, previousError;
     const double maxMotorSpeed = 60;
+
  public:
     bool motorDirection = true;
 

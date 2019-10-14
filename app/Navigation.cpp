@@ -43,13 +43,14 @@ kp_ = 0.5;
 ki_ = 0.05;
 kd_ = 0.001;
 diffTime = 0.002;
-error = 0; 
+error = 0;
 previousError = 0;
 }
 
 Navigation::~Navigation() {}
 
-double Navigation::calculate(double currentVelocity, double setPoint, int flag) {
+double Navigation::calculate(double currentVelocity, double setPoint,
+int flag) {
 return 100;
 }
 

@@ -43,13 +43,13 @@ OTHER DEALINGS IN THE SOFTWARE.
  */
 class SteerAlgorithm {
  private:
- 	const double shaftLength_ = 4;
-    const double shaftDistance_ = 8;
- 	const double maxTurnVelocity_ = 20;
- 	const double wheelCircumference_ = 2;
- 	double lWheelAngle_, rWheelAngle_, heading_, robotAngle_, corrRadius_;
- public:
+  const double shaftLength_ = 4;
+  const double shaftDistance_ = 8;
+  const double maxTurnVelocity_ = 20;
+  const double wheelCircumference_ = 2;
+  double lWheelAngle_, rWheelAngle_, heading_, robotAngle_, corrRadius_;
 
+ public:
    /**
     *  @brief Constructor of class SteerAlgorithm
     */
@@ -65,14 +65,14 @@ class SteerAlgorithm {
     *  @param none
     *  @return double corresponding radius
     */
-    double getCorrRadius();
+    double getCorrRadius_();
 
    /**
     *  @brief Function to set corresponding radius
     *  @param double radius
     *  @return bool true
     */
-    bool setCorrRadius(double r);
+    bool setCorrRadius_(double r);
 
    /**
     *  @brief Function to calculate the length of arc
@@ -94,7 +94,8 @@ class SteerAlgorithm {
     *  front shaft
     *  @return double maxWheelAngle
     */
-    double changeWheelAngles(double corrRadius, double shaftLength, double shaftDistance);
+    double changeWheelAngles(double corrRadius, double shaftLength,
+    double shaftDistance);
 
   /**
     *  @brief Function to set wheel angles to 0
@@ -111,7 +112,5 @@ class SteerAlgorithm {
     *  @return double dummyWheelAngle
     */
     double turnTime(double arclength, double newVelocity);
-    
 };
-
 #endif  // INCLUDE_STEERALGORITHM_HPP_

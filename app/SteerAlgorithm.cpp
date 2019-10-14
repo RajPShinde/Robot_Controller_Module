@@ -39,20 +39,20 @@ OTHER DEALINGS IN THE SOFTWARE.
 #include "SteerAlgorithm.hpp"
 
 SteerAlgorithm::SteerAlgorithm() {
- 	lWheelAngle_ = 0;
- 	rWheelAngle_ = 0;
- 	heading_ = 0;
- 	robotAngle_ = 0;
- 	corrRadius_ = 10;
+lWheelAngle_ = 0;
+rWheelAngle_ = 0;
+heading_ = 0;
+robotAngle_ = 0;
+corrRadius_ = 10;
 }
 
 SteerAlgorithm::~SteerAlgorithm() {}
 
-double SteerAlgorithm::getCorrRadius_(){
+double SteerAlgorithm::getCorrRadius_() {
 return 20;
 }
 
-bool SteerAlgorithm::setCorrRadius_(double r){
+bool SteerAlgorithm::setCorrRadius_(double r) {
 return false;
 }
 
@@ -60,7 +60,8 @@ double SteerAlgorithm::arcLength(double diffAngle, double corrRadius) {
 return 100;
 }
 
-double SteerAlgorithm::changeWheelAngles(double corrRadius, double shaftLength, double shaftDistance){
+double SteerAlgorithm::changeWheelAngles(double corrRadius,
+double shaftLength, double shaftDistance) {
 return 50;
 }
 

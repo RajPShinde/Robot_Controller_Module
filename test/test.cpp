@@ -33,11 +33,10 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @brief   Mid Term Project
  *  @section
  */
+#include <gtest/gtest.h>
 
 #include <cstdlib>
 #include <memory>
-
-#include <gtest/gtest.h>
 
 #include "Navigation.hpp"
 #include "SteerAlgorithm.hpp"
@@ -80,7 +79,7 @@ ASSERT_NEAR(testn.calculate(10, 30, 0), 30, 10);
  */
 TEST(SteerAlgorithm, testCorrRadius) {
 SteerAlgorithm tests;
-EXPECT_TRUE(tests.setCorrRadius_(10));	
+EXPECT_TRUE(tests.setCorrRadius_(10));
 EXPECT_LT(tests.getCorrRadius_(), 20);
 }
 
