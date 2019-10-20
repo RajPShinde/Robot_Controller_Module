@@ -37,26 +37,19 @@ Log- https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8
 
 ## Dependencies
 1. C++ 11/14/17
-2. gnuplot
+2. gnuplot- http://stahlke.org/dan/gnuplot-iostream/
 <br>Install gnuplot
 ```
 sudo apt-get install gnuplot
 ```
 
-
-## Required modification for Sprint2
-* Update the Navigation header files for the function calculate.
-* Update the test cases.
-
-
-
-## TODO Sprint 2
+## TODO
 * Update the AIP spreadsheet.
 * Implementation of the Functions.
 * Display Output on Graph.
 * Make sure that all the Test are passed.
-* Update UML Diagrams.
 * Check for cpplint and cppcheck errors and paste output in results.
+* Generate Doxygen Files
 
 ## Build
 ```
