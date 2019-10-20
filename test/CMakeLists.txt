@@ -28,7 +28,8 @@ set(GTEST_SHUFFLE 1)
 add_executable(
     cpp-test
     main.cpp
-    test.cpp
+    testNavigation.cpp
+    testSteerAlgorithm.cpp
     ../app/Navigation.cpp
     ../app/SteerAlgorithm.cpp
 )

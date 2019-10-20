@@ -38,40 +38,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 #include <cstdlib>
 #include <memory>
 
-#include "Navigation.hpp"
 #include "SteerAlgorithm.hpp"
-
-/**
- *  @brief Test to check the set functions
- *  for kp_,ki_ and kd_
- */
-TEST(Navigation, testSetPid) {
-Navigation testn;
-EXPECT_TRUE(testn.setKp_(1));
-EXPECT_TRUE(testn.setKi_(1));
-EXPECT_TRUE(testn.setKd_(1));
-}
-
-/**
- *  @brief Test to check that values of
- *  kp_,ki_ and kd_ are below 1 or not
- */
-TEST(Navigation, testGetPid) {
-Navigation testn;
-EXPECT_LT(testn.getKp_(), 1);
-EXPECT_LT(testn.getKi_(), 1);
-EXPECT_LT(testn.getKd_(), 1);
-}
-
-/**
- *  @brief Test to check the output of PID
- *  Controller in the first cycle is within the set
- *  bound
- */
-TEST(Navigation, testVelocity) {
-Navigation testn;
-ASSERT_NEAR(testn.calculate(10, 30, 0), 30, 10);
-}
 
 /**
  *  @brief Tests to check that the set functions works 
@@ -79,8 +46,8 @@ ASSERT_NEAR(testn.calculate(10, 30, 0), 30, 10);
  */
 TEST(SteerAlgorithm, testCorrRadius) {
 SteerAlgorithm tests;
-EXPECT_TRUE(tests.setCorrRadius_(10));
-EXPECT_LT(tests.getCorrRadius_(), 20);
+EXPECT_TRUE(tests.setCorrRadius_(100));
+EXPECT_LT(tests.getCorrRadius_(), 200);
 }
 
 /**
@@ -101,6 +68,6 @@ EXPECT_LT(tests.changeWheelAngles(10, 4, 8), 46);
 TEST(SteerAlgorithm, testCalculations) {
 SteerAlgorithm tests;
 EXPECT_LT(tests.arcLength(360, 10), 70);
-EXPECT_GT(tests.turnTime(3, 10), 0);
+EXPECT_GT(tests.turnTime(100, 20), 0);
 }
 
