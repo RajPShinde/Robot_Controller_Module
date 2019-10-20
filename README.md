@@ -43,9 +43,12 @@ Log- https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8
 sudo apt-get install gnuplot
 ```
 
+
 ## Required modification for Sprint2
 * Update the Navigation header files for the function calculate.
 * Update the test cases.
+
+
 
 ## TODO Sprint 2
 * Update the AIP spreadsheet.

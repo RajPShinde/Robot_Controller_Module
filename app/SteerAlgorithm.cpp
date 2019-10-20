@@ -43,7 +43,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 SteerAlgorithm::SteerAlgorithm() {
 lWheelAngle_ = 0;
 rWheelAngle_ = 0;
-heading_ = 0;
+heading = 0;
 robotAngle_ = 0;
 corrRadius_ = 100;
 }

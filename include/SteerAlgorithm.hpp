@@ -1,4 +1,4 @@
-/************************************************************************
+﻿/************************************************************************
 MIT License
 
 Copyright © 2019 Raj Shinde
@@ -43,13 +43,15 @@ OTHER DEALINGS IN THE SOFTWARE.
  */
 class SteerAlgorithm {
  private:
-  const double shaftLength_ = 4;
-  const double shaftDistance_ = 8;
-  const double maxTurnVelocity_ = 20;
   const double wheelCircumference_ = 2;
-  double lWheelAngle_, rWheelAngle_, heading_, robotAngle_, corrRadius_;
+  double lWheelAngle_, rWheelAngle_, robotAngle_, corrRadius_;
 
  public:
+    const double shaftLength = 4;
+    const double shaftDistance = 8;
+    const double maxTurnVelocity = 20;
+    double heading;
+    int dir;
    /**
     *  @brief Constructor of class SteerAlgorithm
     */
@@ -95,7 +97,7 @@ class SteerAlgorithm {
     *  @return double maxWheelAngle
     */
     double changeWheelAngles(double corrRadius, double shaftLength,
-    double shaftDistance);
+			     double shaftDistance);
 
   /**
     *  @brief Function to set wheel angles to 0
@@ -109,7 +111,7 @@ class SteerAlgorithm {
     *  turn or keep wheels at the an angle
     *  @param double arcLength, length of arc to be traced
     *  @param double newVelocity, velocity
-    *  @return double dummyWheelAngle
+    *  @return double time
     */
     double turnTime(double arclength, double newVelocity);
 };

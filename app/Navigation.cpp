@@ -56,7 +56,8 @@ previousError_ = 0;
 Navigation::~Navigation() {}
 
 //change is here
-double Navigation::calculate(double currentVelocity, 				
+double Navigation::calculate(double targetHeading,
+			     double currentVelocity, 				
 			     double setPoint,
 			     int flag) {
 double newVelocity=0;
