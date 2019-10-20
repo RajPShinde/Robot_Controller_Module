@@ -1,4 +1,4 @@
-/************************************************************************
+﻿/************************************************************************
 MIT License
 
 Copyright © 2019 Raj Shinde
@@ -64,12 +64,13 @@ class Navigation : public SteerAlgorithm {
    /**
     *  @brief Function to calculate new velocity in m/s with a PID 
     *  Algorithm using kp, ki & kd
+    *  @param double targetHeading, Target heading of the robot
     *  @param double currentVelocity, current velocity of robot
     *  @param double setPoint, Target Velocity
     *  @param int flag, to enable while
-    *  @return double neVelocity
+    *  @return double newVelocity
    */
-    double calculate(double currentVelocity, double setPoint, int flag);
+    double calculate(double targetHeading,double currentVelocity, double setPoint, int flag);
 
    /**
     *  @brief Function to get kp_

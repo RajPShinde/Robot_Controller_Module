@@ -36,40 +36,58 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 #include <iostream>
 
+#include <cmath>
+
 #include "SteerAlgorithm.hpp"
 
 SteerAlgorithm::SteerAlgorithm() {
 lWheelAngle_ = 0;
 rWheelAngle_ = 0;
-heading_ = 0;
+heading = 0;
 robotAngle_ = 0;
-corrRadius_ = 10;
+corrRadius_ = 100;
 }
 
 SteerAlgorithm::~SteerAlgorithm() {}
 
 double SteerAlgorithm::getCorrRadius_() {
-return 20;
+return corrRadius_;
 }
 
 bool SteerAlgorithm::setCorrRadius_(double r) {
-return false;
+bool flag = true;
+corrRadius_=r;
+if(corrRadius_ != r) {
+	flag=false;
+}
+return flag;
 }
 
 double SteerAlgorithm::arcLength(double diffAngle, double corrRadius) {
-return 100;
+return ((diffAngle/360)*(2*M_PI*corrRadius));
 }
 
 double SteerAlgorithm::changeWheelAngles(double corrRadius,
-double shaftLength, double shaftDistance) {
-return 50;
+					 double shaftLength, 
+					 double shaftDistance) {
+lWheelAngle_ = (M_PI/2) - std::atan((corrRadius + (shaftLength / 2))
+						 / shaftDistance) * dir; 
+rWheelAngle_ = (M_PI/2) - std::atan((corrRadius - (shaftLength / 2))
+						 / shaftDistance) * dir; 
+return std::max(lWheelAngle_,rWheelAngle_);
 }
 
 bool SteerAlgorithm::resetWheel() {
-return false;
+bool flag = true;
+lWheelAngle_=0;
+rWheelAngle_=0;
+if(lWheelAngle_!=0 && rWheelAngle_!=0){
+	flag=false;
+}
+return flag;
 }
 
 double SteerAlgorithm::turnTime(double arclength, double newVelocity) {
-return -100;
+return (arclength/newVelocity);
 }
 

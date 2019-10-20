@@ -10,7 +10,7 @@
 * **Raj Prakash Shinde** - *Sprint 1- Driver & Sprint 2- Navigator* - [GitHub](https://github.com/RajPShinde)
 <br>I am a Masters in Robotics Engineering student at the University of Maryland, College Park. My primary area of interest are Legged Robotics and Automation. 
 * **Prasheel Renkuntla** - *Sprint 1- Navigator & Sprint 2- Driver* - [GitHub](https://github.com/Prasheel24)
-<br>To be added
+<br>I am a Master's in Robotics Engineering student at the University of Maryland, College Park. My primary area of interest is in Vision integrated Robot Systems.
 
 ## Overview
 This is a controller module for a robot that uses an Ackermann Steering Model, This controller is to be implemented in a four wheeled Robot made by ACME Robotics.
@@ -42,6 +42,13 @@ Log- https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8
 ```
 sudo apt-get install gnuplot
 ```
+
+
+## Required modification for Sprint2
+* Update the Navigation header files for the function calculate.
+* Update the test cases.
+
+
 
 ## TODO Sprint 2
 * Update the AIP spreadsheet.
@@ -81,3 +88,4 @@ None
 ## References
 * Ackermann Steering- https://www.sciencedirect.com/topics/engineering/ackermann
 * PID Controller- https://en.wikipedia.org/wiki/PID_controller
+* gnuplot- http://stahlke.org/dan/gnuplot-iostream/

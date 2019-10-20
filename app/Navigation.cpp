@@ -36,7 +36,13 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 #include <iostream>
 
+#include <fstream> 
+
+#include <time.h>
+
 #include "Navigation.hpp"
+
+#include "SteerAlgorithm.hpp"
 
 Navigation::Navigation() {
 kp_ = 0.5;
@@ -49,32 +55,51 @@ previousError_ = 0;
 
 Navigation::~Navigation() {}
 
-double Navigation::calculate(double currentVelocity, double setPoint,
-int flag) {
-return 100;
+//change is here
+double Navigation::calculate(double targetHeading,
+			     double currentVelocity, 				
+			     double setPoint,
+			     int flag) {
+double newVelocity=0;
+return newVelocity;
 }
 
 double Navigation::getKp_() {
-return 10;
+return kp_;
 }
 
 double Navigation::getKi_() {
-return 10;
+return ki_;
 }
 
 double Navigation::getKd_() {
-return 10;
+return kd_;
 }
 
 bool Navigation::setKp_(double kp) {
-return false;
+bool flag = true;
+kp_= kp;
+if (kp_ != kp){
+	flag=false;
+}
+return flag;
 }
 
 bool Navigation::setKi_(double ki) {
-return false;
+bool flag = true;
+ki_= ki;
+if (ki_ != ki){
+	flag=false;
+}
+return flag;
 }
 
 bool Navigation::setKd_(double kd) {
-return false;
+bool flag = true;
+kd_= kd;
+if (kd_ != kd){
+	flag=false;
+}
+return flag;
 }
 
