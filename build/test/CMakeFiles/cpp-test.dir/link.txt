@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Wextra -Wpedantic -g   CMakeFiles/cpp-test.dir/main.cpp.o CMakeFiles/cpp-test.dir/testNavigation.cpp.o CMakeFiles/cpp-test.dir/testSteerAlgorithm.cpp.o CMakeFiles/cpp-test.dir/__/app/Navigation.cpp.o CMakeFiles/cpp-test.dir/__/app/SteerAlgorithm.cpp.o  -o cpp-test -rdynamic ../vendor/googletest/googletest/libgtest.a -lpthread 

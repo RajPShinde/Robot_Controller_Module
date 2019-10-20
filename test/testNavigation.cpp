@@ -63,11 +63,12 @@ EXPECT_LT(testn.getKd_(), 1);
 }
 
 /**
- *  @brief Test to check the output of PID
- *  Controller in the first cycle is within the set
- *  bound
+ *  @brief Test to check the output of calculate
+ *  function converges with the setPoint and
+ *  Heading
  */
-TEST(Navigation, testVelocity) {
+TEST(Navigation, testConvergence) {
 Navigation testn;
 ASSERT_NEAR(testn.calculate(0, 10, 40, 1), 40, 2);
+ASSERT_NEAR(testn.calculate(120, 10, 40, 0), 120, 1);
 }
