@@ -39,7 +39,6 @@ OTHER DEALINGS IN THE SOFTWARE.
 #include <memory>
 
 #include "Navigation.hpp"
-#include "SteerAlgorithm.hpp"
 
 /**
  *  @brief Test to check the set functions
@@ -64,43 +63,12 @@ EXPECT_LT(testn.getKd_(), 1);
 }
 
 /**
- *  @brief Test to check the output of PID
- *  Controller in the first cycle is within the set
- *  bound
+ *  @brief Test to check the output of calculate
+ *  function converges with the setPoint and
+ *  Heading
  */
-TEST(Navigation, testVelocity) {
+TEST(Navigation, testConvergence) {
 Navigation testn;
-ASSERT_NEAR(testn.calculate(10, 30, 0), 30, 10);
+ASSERT_NEAR(testn.calculate(0, 10, 40, 1), 40, 2);
+ASSERT_NEAR(testn.calculate(120, 10, 40, 0), 120, 1);
 }
-
-/**
- *  @brief Tests to check that the set functions works 
- *  and the value of corrRadius in below setlimit
- */
-TEST(SteerAlgorithm, testCorrRadius) {
-SteerAlgorithm tests;
-EXPECT_TRUE(tests.setCorrRadius_(10));
-EXPECT_LT(tests.getCorrRadius_(), 20);
-}
-
-/**
- *  @brief Tests to check if the wheel angles get 
- *  resetted and the Ackeermann kinematic model is
- *  is properly implemented
- */
-TEST(SteerAlgorithm, testwheel) {
-SteerAlgorithm tests;
-EXPECT_TRUE(tests.resetWheel());
-EXPECT_LT(tests.changeWheelAngles(10, 4, 8), 46);
-}
-
-/**
- *  @brief Test to check the functions arclength 
- *  and turnTime provide right length and time values
- */
-TEST(SteerAlgorithm, testCalculations) {
-SteerAlgorithm tests;
-EXPECT_LT(tests.arcLength(360, 10), 70);
-EXPECT_GT(tests.turnTime(3, 10), 0);
-}
-
