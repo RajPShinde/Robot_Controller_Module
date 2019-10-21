@@ -25,13 +25,13 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 /**
  *  @copyright MIT License, Copyright © 2019 Raj Shinde
- *  @file    test.cpp
+ *  @file    testSteerAlgorithm.cpp
  *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
  *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
  *  @date    10/10/2019
- *  @version 1.0
+ *  @version 6.0
  *  @brief   Mid Term Project
- *  @section
+ *  @section Tests functionality of SteerAlgorithm Code
  */
 #include <gtest/gtest.h>
 

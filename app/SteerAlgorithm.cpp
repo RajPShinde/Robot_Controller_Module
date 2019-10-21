@@ -29,65 +29,127 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
  *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
  *  @date    10/10/2019
- *  @version 1.0
+ *  @version 6.0
  *  @brief   Mid Term Project
- *  @section
+ *  @section Implements Ackermann Steering
  */
 
 #include <iostream>
-
 #include <cmath>
 
 #include "SteerAlgorithm.hpp"
-
+/**
+ *  @brief Constructor of class SteerAlgorithm
+ */
 SteerAlgorithm::SteerAlgorithm() {
+//   Initialised variables
 lWheelAngle_ = 0;
 rWheelAngle_ = 0;
 heading = 0;
 robotAngle_ = 0;
-corrRadius_ = 100;
+corrRadius_ = 30;
+dir = 1;
+targetHeading = 1;
 }
 
+/**
+ *  @brief Destructor of class SteerAlgorithm
+ */
 SteerAlgorithm::~SteerAlgorithm() {}
 
+/**
+ *  @brief Function to get corresponding radius in meters
+ *  @param none
+ *  @return double corresponding radius
+ */
 double SteerAlgorithm::getCorrRadius_() {
 return corrRadius_;
 }
 
+/**
+ *  @brief Function to set corresponding radius in meters
+ *  @param double radius
+ *  @return bool true
+ */
 bool SteerAlgorithm::setCorrRadius_(double r) {
 bool flag = true;
-corrRadius_=r;
+corrRadius_ = r;
 if(corrRadius_ != r) {
-	flag=false;
+       flag = false;
 }
 return flag;
 }
 
+/**
+ *  @brief Function to calculate the length of arc in meters
+ *  to be traced in order to head in target direction
+ *  @param double diffAngle, difference in current and 
+ *  target heading
+ *  @param double corrRadius, corresponding radius
+ *  @return double arclength
+ */
 double SteerAlgorithm::arcLength(double diffAngle, double corrRadius) {
+        if ( diffAngle == 0 || diffAngle == 360 ) {
+             diffAngle = 0;
+        } else if (diffAngle == 90 || diffAngle == 180) {
+             diffAngle = diffAngle + 0;
+        } else if (diffAngle < 90) {
+             diffAngle = diffAngle + 270;
+        } else {
+        }
 return ((diffAngle/360)*(2*M_PI*corrRadius));
 }
 
+/**
+ *  @brief Function to calculate the angles in degrees for left and
+ *  right wheels as per ackermann model, and then feed them
+ *  to corresponding servos
+ *  @param double corrRadius, corresponding radius
+ *  @param double shaftLength, length between wheels
+ *  @param double shafDistance, distance between rear and
+ *  front shaft
+ *  @return double maxWheelAngle
+ */
 double SteerAlgorithm::changeWheelAngles(double corrRadius,
-					 double shaftLength, 
-					 double shaftDistance) {
-lWheelAngle_ = (M_PI/2) - std::atan((corrRadius + (shaftLength / 2))
-						 / shaftDistance) * dir; 
-rWheelAngle_ = (M_PI/2) - std::atan((corrRadius - (shaftLength / 2))
-						 / shaftDistance) * dir; 
-return std::max(lWheelAngle_,rWheelAngle_);
+                                         double shaftLength,
+                                         double shaftDistance) {
+        if ( targetHeading > 0 ) {
+               dir = 1;
+        } else {
+               dir = -1;
+        }
+
+//  To calculate the angles, follow this link
+//  https://www.sciencedirect.com/topics/engineering/ackermann
+lWheelAngle_ = (90 - (180/M_PI)*std::atan((corrRadius +
+               (shaftLength * 0.5))/ shaftDistance) * dir);
+rWheelAngle_ = (90 - (180/M_PI)*std::atan((corrRadius -
+               (shaftLength * 0.5))/ shaftDistance) * dir);
+return std::max(lWheelAngle_, rWheelAngle_);
 }
 
+/**
+ *  @brief Function to set wheel angles to 0
+ *  @param none
+ *  @return bool true
+ */
 bool SteerAlgorithm::resetWheel() {
 bool flag = true;
-lWheelAngle_=0;
-rWheelAngle_=0;
-if(lWheelAngle_!=0 && rWheelAngle_!=0){
-	flag=false;
+lWheelAngle_ = 0;
+rWheelAngle_ = 0;
+if(lWheelAngle_ != 0 && rWheelAngle_ != 0) {
+       flag = false;
 }
 return flag;
 }
 
+/**
+ *  @brief Function to calculate time in seconds required to
+ *  turn or keep wheels at the an angle
+ *  @param double arcLength, length of arc to be traced
+ *  @param double newVelocity, velocity
+ *  @return double time
+ */
 double SteerAlgorithm::turnTime(double arclength, double newVelocity) {
 return (arclength/newVelocity);
 }
-

@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_steer_algorithm_8hpp" kind="file" language="C++">
+    <compoundname>SteerAlgorithm.hpp</compoundname>
+    <includedby refid="app_2main_8cpp" local="yes">app/main.cpp</includedby>
+    <includedby refid="_navigation_8cpp" local="yes">app/Navigation.cpp</includedby>
+    <includedby refid="_steer_algorithm_8cpp" local="yes">app/SteerAlgorithm.cpp</includedby>
+    <includedby refid="_navigation_8hpp" local="yes">include/Navigation.hpp</includedby>
+    <includedby refid="test_steer_algorithm_8cpp" local="yes">test/testSteerAlgorithm.cpp</includedby>
+    <invincdepgraph>
+      <node id="76">
+        <label>app/Navigation.cpp</label>
+        <link refid="_navigation_8cpp"/>
+      </node>
+      <node id="80">
+        <label>test/testSteerAlgorithm.cpp</label>
+        <link refid="test_steer_algorithm_8cpp"/>
+      </node>
+      <node id="77">
+        <label>app/SteerAlgorithm.cpp</label>
+        <link refid="_steer_algorithm_8cpp"/>
+      </node>
+      <node id="75">
+        <label>include/SteerAlgorithm.hpp</label>
+        <link refid="SteerAlgorithm.hpp"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>test/testNavigation.cpp</label>
+        <link refid="test_navigation_8cpp"/>
+      </node>
+      <node id="78">
+        <label>include/Navigation.hpp</label>
+        <link refid="_navigation_8hpp"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_steer_algorithm" prot="public">SteerAlgorithm</innerclass>
+    <briefdescription>
+<para>Mid Term Project. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>MIT License, Copyright © 2019 Raj Shinde</para></simplesect>
+<simplesect kind="author"><para>Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator </para></simplesect>
+<simplesect kind="author"><para>Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator </para></simplesect>
+<simplesect kind="date"><para>10/10/2019 </para></simplesect>
+<simplesect kind="version"><para>6.0 </para></simplesect>
+</para><sect1 id="_steer_algorithm_8hpp_1Ackermann">
+<title>Steering Control Header file</title>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>©<sp/>2019<sp/>Raj<sp/>Shinde</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">obtaining<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">files<sp/>(the<sp/>“Software”),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>“AS<sp/>IS”,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#ifndef<sp/>INCLUDE_STEERALGORITHM_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_STEERALGORITHM_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_steer_algorithm" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wheelCircumference_<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lWheelAngle_,<sp/>rWheelAngle_,<sp/>robotAngle_,<sp/>corrRadius_;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>shaftLength<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>shaftDistance<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>maxTurnVelocity<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>heading;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>targetHeading;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dir;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_steer_algorithm_1af64dd94816ab9d00d85227a42b26a3e8" kindref="member">SteerAlgorithm</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_steer_algorithm_1a37dd2ef0ed856582aaacc103a6cd6700" kindref="member">~SteerAlgorithm</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_steer_algorithm_1a06a7dd049280fab40d1b54c912daf399" kindref="member">getCorrRadius_</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_steer_algorithm_1a93cf1fc7d06376ddeaa4e81f2b0a22cc" kindref="member">setCorrRadius_</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_steer_algorithm_1a17ff78af17e900f752237d274bcf751d" kindref="member">arcLength</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diffAngle,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>corrRadius);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_steer_algorithm_1a6067af69593713f561890ae8ad23f5ff" kindref="member">changeWheelAngles</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>corrRadius,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>shaftLength,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>shaftDistance);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_steer_algorithm_1ab251b6fd1f88fb7a526b0d55cd12625b" kindref="member">resetWheel</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_steer_algorithm_1aefdb433f65c47bf6e0d6af5de98c8f5a" kindref="member">turnTime</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arclength,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>newVelocity);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>INCLUDE_STEERALGORITHM_HPP_</highlight></codeline>
+    </programlisting>
+    <location file="include/SteerAlgorithm.hpp"/>
+  </compounddef>
+</doxygen>

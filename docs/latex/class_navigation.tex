@@ -1,0 +1,237 @@
+\hypertarget{class_navigation}{}\section{Navigation Class Reference}
+\label{class_navigation}\index{Navigation@{Navigation}}
+
+
+Class \hyperlink{class_navigation}{Navigation} Contains the methods of Pid Algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Navigation.\+hpp$>$}
+
+
+
+Inheritance diagram for Navigation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_navigation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Navigation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_navigation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_navigation_a81fdffdefe46340da5fa6c570066b42b}{Navigation} ()
+\begin{DoxyCompactList}\small\item\em Constructor of class \hyperlink{class_navigation}{Navigation}. \end{DoxyCompactList}\item 
+\hyperlink{class_navigation_addd4022d716df48f4e55a1db69361ba7}{$\sim$\+Navigation} ()
+\begin{DoxyCompactList}\small\item\em Destructor of class \hyperlink{class_navigation}{Navigation}. \end{DoxyCompactList}\item 
+double \hyperlink{class_navigation_a0f83b511cec12a68f2c3466c40c5d3cb}{calculate} (double target\+Heading, double current\+Velocity, double set\+Point, int flag)
+\begin{DoxyCompactList}\small\item\em Function to calculate new velocity in m/s with a P\+ID Algorithm using kp, ki \& kd. \end{DoxyCompactList}\item 
+double \hyperlink{class_navigation_ab1469d74f4838a9d32a8647d22701f9f}{get\+Kp\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Function to get kp\+\_\+. \end{DoxyCompactList}\item 
+double \hyperlink{class_navigation_a1a84392d6cce3f60df452ab482b5647c}{get\+Ki\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Function to get ki\+\_\+. \end{DoxyCompactList}\item 
+double \hyperlink{class_navigation_ac6441bb601483166ef7a8081b76f634d}{get\+Kd\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Function to get kd\+\_\+. \end{DoxyCompactList}\item 
+bool \hyperlink{class_navigation_a6dd95f46ff4ecc69895452a1879c30af}{set\+Kp\+\_\+} (double kp)
+\begin{DoxyCompactList}\small\item\em Function to set kp\+\_\+. \end{DoxyCompactList}\item 
+bool \hyperlink{class_navigation_a539d10206ceb162171e39c36e8aa8f0f}{set\+Ki\+\_\+} (double ki)
+\begin{DoxyCompactList}\small\item\em Function to set ki\+\_\+. \end{DoxyCompactList}\item 
+bool \hyperlink{class_navigation_a4986e4357d9707ddf92cf8f559ef3dce}{set\+Kd\+\_\+} (double kd)
+\begin{DoxyCompactList}\small\item\em Function to set kd\+\_\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries motor\+Direction} = true\hypertarget{class_navigation_ad7d7a5d5d1abe99e6b0f31ddb4794252}{}\label{class_navigation_ad7d7a5d5d1abe99e6b0f31ddb4794252}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{class_navigation}{Navigation} Contains the methods of Pid Algorithm. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Navigation@{Navigation}!Navigation@{Navigation}}
+\index{Navigation@{Navigation}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{Navigation()}{Navigation()}}]{\setlength{\rightskip}{0pt plus 5cm}Navigation\+::\+Navigation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_navigation_a81fdffdefe46340da5fa6c570066b42b}{}\label{class_navigation_a81fdffdefe46340da5fa6c570066b42b}
+
+
+Constructor of class \hyperlink{class_navigation}{Navigation}. 
+
+Constructor of class \hyperlink{class_steer_algorithm}{Steer\+Algorithm}. \index{Navigation@{Navigation}!````~Navigation@{$\sim$\+Navigation}}
+\index{````~Navigation@{$\sim$\+Navigation}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{$\sim$\+Navigation()}{~Navigation()}}]{\setlength{\rightskip}{0pt plus 5cm}Navigation\+::$\sim$\+Navigation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_navigation_addd4022d716df48f4e55a1db69361ba7}{}\label{class_navigation_addd4022d716df48f4e55a1db69361ba7}
+
+
+Destructor of class \hyperlink{class_navigation}{Navigation}. 
+
+Destructor of class \hyperlink{class_steer_algorithm}{Steer\+Algorithm}. 
+
+\subsection{Member Function Documentation}
+\index{Navigation@{Navigation}!calculate@{calculate}}
+\index{calculate@{calculate}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{calculate(double target\+Heading, double current\+Velocity, double set\+Point, int flag)}{calculate(double targetHeading, double currentVelocity, double setPoint, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}double Navigation\+::calculate (
+\begin{DoxyParamCaption}
+\item[{double}]{target\+Heading, }
+\item[{double}]{current\+Velocity, }
+\item[{double}]{set\+Point, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{class_navigation_a0f83b511cec12a68f2c3466c40c5d3cb}{}\label{class_navigation_a0f83b511cec12a68f2c3466c40c5d3cb}
+
+
+Function to calculate new velocity in m/s with a P\+ID Algorithm using kp, ki \& kd. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & target\+Heading, Target heading of the robot \\
+\hline
+{\em double} & current\+Velocity, current velocity of robot \\
+\hline
+{\em double} & set\+Point, Target Velocity \\
+\hline
+{\em int} & flag, to enable while \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double new\+Velocity 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!get\+Kd\+\_\+@{get\+Kd\+\_\+}}
+\index{get\+Kd\+\_\+@{get\+Kd\+\_\+}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{get\+Kd\+\_\+()}{getKd_()}}]{\setlength{\rightskip}{0pt plus 5cm}double Navigation\+::get\+Kd\+\_\+ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_navigation_ac6441bb601483166ef7a8081b76f634d}{}\label{class_navigation_ac6441bb601483166ef7a8081b76f634d}
+
+
+Function to get kd\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!get\+Ki\+\_\+@{get\+Ki\+\_\+}}
+\index{get\+Ki\+\_\+@{get\+Ki\+\_\+}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{get\+Ki\+\_\+()}{getKi_()}}]{\setlength{\rightskip}{0pt plus 5cm}double Navigation\+::get\+Ki\+\_\+ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_navigation_a1a84392d6cce3f60df452ab482b5647c}{}\label{class_navigation_a1a84392d6cce3f60df452ab482b5647c}
+
+
+Function to get ki\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!get\+Kp\+\_\+@{get\+Kp\+\_\+}}
+\index{get\+Kp\+\_\+@{get\+Kp\+\_\+}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{get\+Kp\+\_\+()}{getKp_()}}]{\setlength{\rightskip}{0pt plus 5cm}double Navigation\+::get\+Kp\+\_\+ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_navigation_ab1469d74f4838a9d32a8647d22701f9f}{}\label{class_navigation_ab1469d74f4838a9d32a8647d22701f9f}
+
+
+Function to get kp\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!set\+Kd\+\_\+@{set\+Kd\+\_\+}}
+\index{set\+Kd\+\_\+@{set\+Kd\+\_\+}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{set\+Kd\+\_\+(double kd)}{setKd_(double kd)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Navigation\+::set\+Kd\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{double}]{kd}
+\end{DoxyParamCaption}
+)}\hypertarget{class_navigation_a4986e4357d9707ddf92cf8f559ef3dce}{}\label{class_navigation_a4986e4357d9707ddf92cf8f559ef3dce}
+
+
+Function to set kd\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & kd \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean true 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!set\+Ki\+\_\+@{set\+Ki\+\_\+}}
+\index{set\+Ki\+\_\+@{set\+Ki\+\_\+}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{set\+Ki\+\_\+(double ki)}{setKi_(double ki)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Navigation\+::set\+Ki\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{double}]{ki}
+\end{DoxyParamCaption}
+)}\hypertarget{class_navigation_a539d10206ceb162171e39c36e8aa8f0f}{}\label{class_navigation_a539d10206ceb162171e39c36e8aa8f0f}
+
+
+Function to set ki\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & ki \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean true 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!set\+Kp\+\_\+@{set\+Kp\+\_\+}}
+\index{set\+Kp\+\_\+@{set\+Kp\+\_\+}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{set\+Kp\+\_\+(double kp)}{setKp_(double kp)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Navigation\+::set\+Kp\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{double}]{kp}
+\end{DoxyParamCaption}
+)}\hypertarget{class_navigation_a6dd95f46ff4ecc69895452a1879c30af}{}\label{class_navigation_a6dd95f46ff4ecc69895452a1879c30af}
+
+
+Function to set kp\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & kp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean true 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_navigation_8hpp}{Navigation.\+hpp}\item 
+app/\hyperlink{_navigation_8cpp}{Navigation.\+cpp}\end{DoxyCompactItemize}
