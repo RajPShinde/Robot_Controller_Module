@@ -47,7 +47,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 int main() {
 Navigation nav;
 nav.setKp_(0.5);
-nav.setKi_(0.02);
+nav.setKi_(0.05);
 nav.setKd_(0.001);
 nav.calculate(90, 10, 40, 2);
 std::cout << "For Kp :" << nav.getKp_()
