@@ -205,8 +205,8 @@ return 0;
 } else {
   return heading;
 }
-errorValue = 0; 
-propOutput = 0; 
+errorValue = 0;
+propOutput = 0;
 integralVal = 0;
 intOutput = 0;
 derivativeVal = 0;
