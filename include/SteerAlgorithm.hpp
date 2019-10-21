@@ -51,6 +51,7 @@ class SteerAlgorithm {
     const double shaftDistance = 8;
     const double maxTurnVelocity = 20;
     double heading;
+    double targetHeading;
     int dir;
    /**
     *  @brief Constructor of class SteerAlgorithm

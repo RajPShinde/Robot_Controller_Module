@@ -55,12 +55,99 @@ previousError_ = 0;
 
 Navigation::~Navigation() {}
 
-//change is here
 double Navigation::calculate(double targetHeading,
 			     double currentVelocity, 				
 			     double setPoint,
 			     int flag) {
 double newVelocity=0;
+double errorValue=0;
+double propOutput=0;
+double integralVal=0;
+double intOutput=0;
+double derivativeVal=0;
+double derOutput=0;
+double tempVel;
+int velocityConverged = 0;
+int headingConverged = 0;
+
+double outTime=0;
+
+SteerAlgorithm Ackermann = SteerAlgorithm();
+while(velocityConverged!=1 && headingConverged!=1){       
+	errorValue = setPoint - currentVelocity;
+	propOutput = kp_ * errorValue;
+
+	integralVal += errorValue * diffTime_;
+	intOutput = ki_ * integralVal;
+
+	derivativeVal = ((errorValue - previousError_) / diffTime_);
+	derOutput = kd_ * derivativeVal;
+
+	newVelocity = currentVelocity + (propOutput + intOutput + derOutput);
+	previousError_ = errorValue;
+	currentVelocity = newVelocity;	
+
+	std::cout << "Current Velocity: " << currentVelocity 
+		  << " Setpoint: " << newVelocity << std::endl;				
+        if(setPoint == newVelocity){		
+           velocityConverged=1; 
+        }
+	if((targetHeading-heading)!=0 && velocityConverged == 1)
+	{              
+		if(newVelocity > maxTurnVelocity)
+		{	
+		 tempVel = maxTurnVelocity;
+		}
+        tempVel = newVelocity;
+        if(targetHeading-heading>0){
+		dir=1;
+	}
+        else{
+		dir=-1;
+	}
+	Ackermann.changeWheelAngles(Ackermann.getCorrRadius_(),shaftLength,shaftDistance);
+		
+	double arcLen = Ackermann.arcLength(targetHeading, Ackermann.getCorrRadius_());
+	auto turnTime = Ackermann.turnTime(arcLen,newVelocity);
+	clock_t tic = clock();
+	do
+	{
+		errorValue = setPoint - currentVelocity;
+		propOutput = kp_ * errorValue;
+
+		integralVal += errorValue * diffTime_;
+		intOutput = ki_ * integralVal;
+
+		derivativeVal = ((errorValue - previousError_) / diffTime_);
+		derOutput = kd_ * derivativeVal;
+	
+		newVelocity = currentVelocity + (propOutput + intOutput + derOutput);
+		previousError_ = errorValue;
+		currentVelocity = newVelocity;			
+						
+		clock_t toc = clock();
+		outTime = ((double) (toc-tic)) / CLOCKS_PER_SEC;
+		double newArcLen = tempVel * outTime;
+                heading = (newArcLen * targetHeading / arcLen);
+
+		std::cout << "Current Velocity: " << currentVelocity 
+			  << " Setpoint: " << newVelocity << std::endl;				
+	 	std::cout << "Current Heading: " << heading 
+			  << " Target: " << targetHeading << std::endl;		
+	} 	
+	while((outTime < turnTime) && (targetHeading!=heading));
+            targetHeading=0;
+            headingConverged=1;			 		
+            Ackermann.resetWheel();
+    }		
+}	
+if(flag==1){
+        return newVelocity;
+}
+else{	
+	return heading;
+}
+
 return newVelocity;
 }
 

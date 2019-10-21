@@ -25,7 +25,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 /**
  *  @copyright MIT License, Copyright © 2019 Raj Shinde
- *  @file    main.cpp
+ *  @file    test.cpp
  *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
  *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
  *  @date    10/10/2019
@@ -33,19 +33,41 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @brief   Mid Term Project
  *  @section
  */
+#include <gtest/gtest.h>
 
-#include <iostream>
+#include <cstdlib>
+#include <memory>
 
-#include "Navigation.hpp"
 #include "SteerAlgorithm.hpp"
 
 /**
- *  @brief  Main Function to call the methods and show demostration
- *  @param  None
- *  @return 0
+ *  @brief Tests to check that the set functions works 
+ *  and the value of corrRadius in below setlimit
  */
-int main() {
-Navigation nav;
-nav.calculate(90,10,40,1);
-return 0;
+TEST(SteerAlgorithm, testCorrRadius) {
+SteerAlgorithm tests;
+EXPECT_TRUE(tests.setCorrRadius_(100));
+EXPECT_LT(tests.getCorrRadius_(), 150);
 }
+
+/**
+ *  @brief Tests to check if the wheel angles get 
+ *  resetted and the Ackeermann kinematic model is
+ *  is properly implemented
+ */
+TEST(SteerAlgorithm, testwheel) {
+SteerAlgorithm tests;
+EXPECT_TRUE(tests.resetWheel());
+EXPECT_LT(tests.changeWheelAngles(10, 4, 8), 46);
+}
+
+/**
+ *  @brief Test to check the functions arclength 
+ *  and turnTime provide right length and time values
+ */
+TEST(SteerAlgorithm, testCalculations) {
+SteerAlgorithm tests;
+EXPECT_LT(tests.arcLength(360, 10), 70);
+EXPECT_GT(tests.turnTime(100, 20), 0);
+}
+

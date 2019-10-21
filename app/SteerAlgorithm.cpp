@@ -45,7 +45,9 @@ lWheelAngle_ = 0;
 rWheelAngle_ = 0;
 heading = 0;
 robotAngle_ = 0;
-corrRadius_ = 100;
+corrRadius_ = 30;
+dir=1;
+targetHeading=1;
 }
 
 SteerAlgorithm::~SteerAlgorithm() {}
@@ -64,16 +66,30 @@ return flag;
 }
 
 double SteerAlgorithm::arcLength(double diffAngle, double corrRadius) {
+	if (diffAngle==0 || diffAngle==360 ){
+		diffAngle=0;
+	}
+	else if(diffAngle==90 || diffAngle==180){
+		diffAngle=diffAngle;
+	}
+	else if(diffAngle<90){
+		diffAngle=diffAngle+270;
+	}
 return ((diffAngle/360)*(2*M_PI*corrRadius));
 }
 
 double SteerAlgorithm::changeWheelAngles(double corrRadius,
 					 double shaftLength, 
 					 double shaftDistance) {
-lWheelAngle_ = (M_PI/2) - std::atan((corrRadius + (shaftLength / 2))
-						 / shaftDistance) * dir; 
-rWheelAngle_ = (M_PI/2) - std::atan((corrRadius - (shaftLength / 2))
-						 / shaftDistance) * dir; 
+	if(targetHeading>0){
+		dir=1;
+	}
+        else{
+		dir=-1;
+	}
+lWheelAngle_ = ( 90- (180/M_PI)*std::atan((corrRadius + (shaftLength * 0.5))/ shaftDistance) *dir) ; 
+rWheelAngle_ = ( 90- (180/M_PI)*std::atan((corrRadius - (shaftLength * 0.5))/ shaftDistance) *dir) ; 
+
 return std::max(lWheelAngle_,rWheelAngle_);
 }
 
@@ -90,4 +106,3 @@ return flag;
 double SteerAlgorithm::turnTime(double arclength, double newVelocity) {
 return (arclength/newVelocity);
 }
-
