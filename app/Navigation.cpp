@@ -131,9 +131,11 @@ while(velocityConverged != 1 && headingConverged != 1) {
         pointsVelocity.push_back(std::make_pair((
                                  static_cast<double> (toc)/CLOCKS_PER_SEC),
                                  currentVelocity));
+        if (flag == 2) {
         //  show the values on screen
         std::cout << "Current Velocity: " << currentVelocity
                   << " Setpoint: " << newVelocity << std::endl;
+        }
         if (setPoint == newVelocity) {
            velocityConverged = 1;
         }
@@ -182,10 +184,12 @@ while(velocityConverged != 1 && headingConverged != 1) {
                 points.push_back(std::make_pair(
                                   (static_cast<double> (toc)/CLOCKS_PER_SEC),
                                    heading));
+                if (flag == 2) {
                 std::cout << "Current Velocity: " << currentVelocity
                           << " Setpoint: " << newVelocity << std::endl;
                 std::cout << "Current Heading: " << heading
                           << " Target: " << targetHeading << std::endl;
+                }
           }
         targetHeading = 0;
         headingConverged = 1;
