@@ -34,9 +34,11 @@ script:
   - mkdir build
   - cd build
   - cmake -DCOVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ../
+  - qmake
   - make
   - make code_coverage
   - test/cpp-test
+  - ./travis_qmake_gcc_cpp14_boost
 
 after_success:
   - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*"
