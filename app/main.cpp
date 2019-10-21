@@ -31,7 +31,8 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @date    10/10/2019
  *  @version 1.0
  *  @brief   Mid Term Project
- *  @section
+ *  @section This program shows the graphical demonstration of
+ * 	     Ackermann Steering implemented on PID Controller
  */
 
 #include <iostream>
@@ -45,7 +46,5 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @return 0
  */
 int main() {
-Navigation nav;
-nav.calculate(90,10,40,1);
 return 0;
 }

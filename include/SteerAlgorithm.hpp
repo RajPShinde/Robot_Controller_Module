@@ -27,7 +27,7 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @date    10/10/2019
  *  @version 1.0
  *  @brief   Mid Term Project
- *  @section
+ *  @section This is the header file to implement Ackermann Steering Control
  */
 
 #ifndef INCLUDE_STEERALGORITHM_HPP_

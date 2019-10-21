@@ -42,21 +42,11 @@ Log- https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8
 ```
 sudo apt-get install gnuplot
 ```
-
-
-## Required modification for Sprint2
-* Update the Navigation header files for the function calculate.
-* Update the test cases.
-
-
-
-## TODO Sprint 2
-* Update the AIP spreadsheet.
-* Implementation of the Functions.
-* Display Output on Graph.
-* Make sure that all the Test are passed.
-* Update UML Diagrams.
-* Check for cpplint and cppcheck errors and paste output in results.
+3. boost
+<br>Install boost
+```
+sudo apt-get install libboost-all-dev
+```
 
 ## Build
 ```
@@ -77,11 +67,22 @@ make
 ./test/cpp-test
 ```
 ## Demo
-To Be Added
+Run the program. Once the velocity and heading converge to the target then graphs will be displayed as below. Also, converged values will be shown in the terminal.
 
-## Result
-To Be Added
-
+<p align="center">
+<h5> Heading Convergence</h5>
+<img src="/output/HeadingConvergence.png">
+</p>
+</br>
+<p align="center">
+<h5> Velocity Convergence</h5>
+<img src="/output/VelocityConvergence.png">
+</p>
+</br>
+<p align="center">
+<h5> Terminal Output</h5>
+<img src="/output/TerminalOutput.png">
+</p>
 ## Bugs
 None
 
