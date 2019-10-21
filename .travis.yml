@@ -20,6 +20,8 @@ matrix:
             - cmake-data
             - libboost-dev
             - libboost-all-dev
+            - gnuplot
+            - gnuplot-x11
       env: COMPILER=g++-5
 
 before_install:
