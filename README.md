@@ -83,6 +83,7 @@ Run the program. Once the velocity and heading converge to the target then graph
 <h5> Terminal Output</h5>
 <img src="/output/TerminalOutput.png">
 </p>
+
 ## Bugs
 None
 
