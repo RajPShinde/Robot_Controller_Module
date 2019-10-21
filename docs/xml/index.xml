@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="class_navigation" kind="class"><name>Navigation</name>
+    <member refid="class_navigation_1ae4793f641072096ff84a3fc0a388b639" kind="variable"><name>kp_</name></member>
+    <member refid="class_navigation_1a725134611ed3d9f29512f5ad707f58f9" kind="variable"><name>ki_</name></member>
+    <member refid="class_navigation_1ad0199044c6517af38ad77594321e6bcd" kind="variable"><name>kd_</name></member>
+    <member refid="class_navigation_1a5748c5ebeea7a4142ca9aaf3f4c8cd78" kind="variable"><name>diffTime_</name></member>
+    <member refid="class_navigation_1aaad61568f4da45d5b32ea63a72bbb6a9" kind="variable"><name>error_</name></member>
+    <member refid="class_navigation_1a6f7165404d8b4467f8372c0cbc657e93" kind="variable"><name>previousError_</name></member>
+    <member refid="class_navigation_1ab3e90b24e7f7e8fea9710d548404f269" kind="variable"><name>maxMotorSpeed_</name></member>
+    <member refid="class_navigation_1ad7d7a5d5d1abe99e6b0f31ddb4794252" kind="variable"><name>motorDirection</name></member>
+    <member refid="class_navigation_1a81fdffdefe46340da5fa6c570066b42b" kind="function"><name>Navigation</name></member>
+    <member refid="class_navigation_1addd4022d716df48f4e55a1db69361ba7" kind="function"><name>~Navigation</name></member>
+    <member refid="class_navigation_1a0f83b511cec12a68f2c3466c40c5d3cb" kind="function"><name>calculate</name></member>
+    <member refid="class_navigation_1ab1469d74f4838a9d32a8647d22701f9f" kind="function"><name>getKp_</name></member>
+    <member refid="class_navigation_1a1a84392d6cce3f60df452ab482b5647c" kind="function"><name>getKi_</name></member>
+    <member refid="class_navigation_1ac6441bb601483166ef7a8081b76f634d" kind="function"><name>getKd_</name></member>
+    <member refid="class_navigation_1a6dd95f46ff4ecc69895452a1879c30af" kind="function"><name>setKp_</name></member>
+    <member refid="class_navigation_1a539d10206ceb162171e39c36e8aa8f0f" kind="function"><name>setKi_</name></member>
+    <member refid="class_navigation_1a4986e4357d9707ddf92cf8f559ef3dce" kind="function"><name>setKd_</name></member>
+  </compound>
+  <compound refid="class_steer_algorithm" kind="class"><name>SteerAlgorithm</name>
+    <member refid="class_steer_algorithm_1aaea370db4364e5b6456b0c1ca6c44c34" kind="variable"><name>wheelCircumference_</name></member>
+    <member refid="class_steer_algorithm_1aae81f0898e0a2d367cf3faf0f0da7b02" kind="variable"><name>lWheelAngle_</name></member>
+    <member refid="class_steer_algorithm_1a5b60157d81095e086e3bdd3f28a9f622" kind="variable"><name>rWheelAngle_</name></member>
+    <member refid="class_steer_algorithm_1a31dc572c7f395bd466043f500e60b936" kind="variable"><name>robotAngle_</name></member>
+    <member refid="class_steer_algorithm_1a4453460d4620dfdb1a379b12221064d3" kind="variable"><name>corrRadius_</name></member>
+    <member refid="class_steer_algorithm_1a9d5bc20acba39f0e53c3d0f6fc280433" kind="variable"><name>shaftLength</name></member>
+    <member refid="class_steer_algorithm_1a38bc87552a30e8eda8f647cf341c9657" kind="variable"><name>shaftDistance</name></member>
+    <member refid="class_steer_algorithm_1acfce52839329f0ebb316f633494466e1" kind="variable"><name>maxTurnVelocity</name></member>
+    <member refid="class_steer_algorithm_1ada73b1f087245af5cda5d1d6b9be7d31" kind="variable"><name>heading</name></member>
+    <member refid="class_steer_algorithm_1a071efeb53e86ee949940b0ab10986044" kind="variable"><name>targetHeading</name></member>
+    <member refid="class_steer_algorithm_1af6ad5604b62eec22cc2d385c7683d019" kind="variable"><name>dir</name></member>
+    <member refid="class_steer_algorithm_1af64dd94816ab9d00d85227a42b26a3e8" kind="function"><name>SteerAlgorithm</name></member>
+    <member refid="class_steer_algorithm_1a37dd2ef0ed856582aaacc103a6cd6700" kind="function"><name>~SteerAlgorithm</name></member>
+    <member refid="class_steer_algorithm_1a06a7dd049280fab40d1b54c912daf399" kind="function"><name>getCorrRadius_</name></member>
+    <member refid="class_steer_algorithm_1a93cf1fc7d06376ddeaa4e81f2b0a22cc" kind="function"><name>setCorrRadius_</name></member>
+    <member refid="class_steer_algorithm_1a17ff78af17e900f752237d274bcf751d" kind="function"><name>arcLength</name></member>
+    <member refid="class_steer_algorithm_1a6067af69593713f561890ae8ad23f5ff" kind="function"><name>changeWheelAngles</name></member>
+    <member refid="class_steer_algorithm_1ab251b6fd1f88fb7a526b0d55cd12625b" kind="function"><name>resetWheel</name></member>
+    <member refid="class_steer_algorithm_1aefdb433f65c47bf6e0d6af5de98c8f5a" kind="function"><name>turnTime</name></member>
+  </compound>
+  <compound refid="app_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="app_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="test_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_navigation_8cpp" kind="file"><name>Navigation.cpp</name>
+  </compound>
+  <compound refid="_steer_algorithm_8cpp" kind="file"><name>SteerAlgorithm.cpp</name>
+  </compound>
+  <compound refid="_c_make_c_compiler_id_8c" kind="file"><name>CMakeCCompilerId.c</name>
+    <member refid="_c_make_c_compiler_id_8c_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a1ce162bad2fe6966ac8b33cc19e120b8" kind="variable"><name>info_language_dialect_default</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_c_make_c_x_x_compiler_id_8cpp" kind="file"><name>CMakeCXXCompilerId.cpp</name>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a1ce162bad2fe6966ac8b33cc19e120b8" kind="variable"><name>info_language_dialect_default</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="feature__tests_8c" kind="file"><name>feature_tests.c</name>
+    <member refid="feature__tests_8c_1a1582568e32f689337602a16bf8a5bff0" kind="variable"><name>features</name></member>
+    <member refid="feature__tests_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="feature__tests_8cxx" kind="file"><name>feature_tests.cxx</name>
+    <member refid="feature__tests_8cxx_1a1582568e32f689337602a16bf8a5bff0" kind="variable"><name>features</name></member>
+    <member refid="feature__tests_8cxx_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_navigation_8hpp" kind="file"><name>Navigation.hpp</name>
+  </compound>
+  <compound refid="_steer_algorithm_8hpp" kind="file"><name>SteerAlgorithm.hpp</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="test_navigation_8cpp" kind="file"><name>testNavigation.cpp</name>
+    <member refid="test_navigation_8cpp_1a093604a7433c91e9a41a6c486ff843b3" kind="function"><name>TEST</name></member>
+    <member refid="test_navigation_8cpp_1a5c632ae16e5ba30ae35d75900430e15a" kind="function"><name>TEST</name></member>
+    <member refid="test_navigation_8cpp_1acc7325d4d1f9e57e7d887a7af00c04b8" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="test_steer_algorithm_8cpp" kind="file"><name>testSteerAlgorithm.cpp</name>
+    <member refid="test_steer_algorithm_8cpp_1a302ee9fe0ef08a6beaea103c911981ff" kind="function"><name>TEST</name></member>
+    <member refid="test_steer_algorithm_8cpp_1ab38a7e56f4e7418febe58d9daf9e4b58" kind="function"><name>TEST</name></member>
+    <member refid="test_steer_algorithm_8cpp_1a2e8c38dec883b8cfc46adb1e0cedb000" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="md_README" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_2c1ec4cfaf5ed43ec260b4f91f837847" kind="dir"><name>build/CMakeFiles/3.5.1</name>
+  </compound>
+  <compound refid="dir_d422163b96683743ed3963d4aac17747" kind="dir"><name>app</name>
+  </compound>
+  <compound refid="dir_4fef79e7177ba769987a8da36c892c5f" kind="dir"><name>build</name>
+  </compound>
+  <compound refid="dir_63772b626f2709090f0bdca0f40827b4" kind="dir"><name>build/CMakeFiles</name>
+  </compound>
+  <compound refid="dir_a573004c1aa1ac4f8bc48460229ea7de" kind="dir"><name>build/CMakeFiles/3.5.1/CompilerIdC</name>
+  </compound>
+  <compound refid="dir_a41afb44cd77021f04ef0298981be91e" kind="dir"><name>build/CMakeFiles/3.5.1/CompilerIdCXX</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>test</name>
+  </compound>
+</doxygenindex>

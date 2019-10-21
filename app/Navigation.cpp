@@ -26,10 +26,9 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
  *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
  *  @date    10/10/2019
- *  @version 1.0
+ *  @version 6.0
  *  @brief   Mid Term Project
- *  @section This program calls the SteerAlgorithm header files to implement
- *           Ackermann control on PID controller.
+ *  @section Implements Ackermann on PID control
  */
 #include <time.h>
 #include <gnuplot-iostream.h>
