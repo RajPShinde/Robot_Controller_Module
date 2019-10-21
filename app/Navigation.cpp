@@ -31,12 +31,12 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @section Implements Ackermann on PID control
  */
 #include <time.h>
-#include <gnuplot-iostream.h>
 
 #include <iostream>
 #include <fstream>
 #include <vector>
 
+#include "gnuplot-iostream.h"
 #include "Navigation.hpp"
 #include "SteerAlgorithm.hpp"
 
@@ -89,6 +89,7 @@ double tempHeading = targetHeading;      //  to store the target for graph
 
 //  call object and intialise variables for Graph in GNUPLOT
 Gnuplot gnu;
+Gnuplot gnup;
 
 std::vector<std::pair<double, double>> combinedXY(1, std::make_pair(0, 0));
 std::vector<std::pair<double, double>> points;
@@ -102,6 +103,12 @@ gnu << "set xlabel \"Time\"\n";
 gnu << "set ylabel \"Heading Angle\"\n";
 gnu << "set key outside\n";
 
+gnup << "set xrange [0:0.17]\nset yrange [0:45]\n";
+gnup << "set title \"Velocity Convergence\"\n";
+gnup << "set pointsize 1\n";
+gnup << "set xlabel \"Time\"\n";
+gnup << "set ylabel \"Current Velocity\"\n";
+gnup << "set key outside\n";
 //  while loop to run until velocity and heading are converged
 while(velocityConverged != 1 && headingConverged != 1) {
         //  Run PID control initially
@@ -124,9 +131,11 @@ while(velocityConverged != 1 && headingConverged != 1) {
         pointsVelocity.push_back(std::make_pair((
                                  static_cast<double> (toc)/CLOCKS_PER_SEC),
                                  currentVelocity));
+        if (flag == 2) {
         //  show the values on screen
         std::cout << "Current Velocity: " << currentVelocity
                   << " Setpoint: " << newVelocity << std::endl;
+        }
         if (setPoint == newVelocity) {
            velocityConverged = 1;
         }
@@ -175,10 +184,12 @@ while(velocityConverged != 1 && headingConverged != 1) {
                 points.push_back(std::make_pair(
                                   (static_cast<double> (toc)/CLOCKS_PER_SEC),
                                    heading));
+                if (flag == 2) {
                 std::cout << "Current Velocity: " << currentVelocity
                           << " Setpoint: " << newVelocity << std::endl;
                 std::cout << "Current Heading: " << heading
                           << " Target: " << targetHeading << std::endl;
+                }
           }
         targetHeading = 0;
         headingConverged = 1;
@@ -189,13 +200,21 @@ if (flag == 2) {
   //  Plot the graph on gnuplot by calling the below lines
   gnu << "plot" << gnu.file1d(points) << "with points title 'Heading' lc 3, "
       << tempHeading << " title 'Target Heading' lt 1 lc 4" << std::endl;
+  gnup << "plot" << gnup.file1d(pointsVelocity)
+       << "with lp title 'Current Velocity' lc 3, "
+       << newVelocity << " title 'Set Point' lt 1 lc 4" << std::endl;
 return 0;
 } else if (flag == 1) {
   return newVelocity;
 } else {
   return heading;
 }
-
+errorValue = 0;
+propOutput = 0;
+integralVal = 0;
+intOutput = 0;
+derivativeVal = 0;
+derOutput = 0;
 return newVelocity;
 }
 

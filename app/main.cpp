@@ -45,5 +45,13 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @return 0
  */
 int main() {
+Navigation nav;
+nav.setKp_(0.5);
+nav.setKi_(0.02);
+nav.setKd_(0.001);
+nav.calculate(90, 10, 40, 2);
+std::cout << "For Kp :" << nav.getKp_()
+          << " Ki : " << nav.getKi_()
+          << " Kd : " << nav.getKd_() << std::endl;
 return 0;
 }

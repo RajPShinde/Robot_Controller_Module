@@ -20,12 +20,15 @@ matrix:
             - cmake-data
             - libboost-dev
             - libboost-all-dev
+            - gnuplot
+            - gnuplot-x11
       env: COMPILER=g++-5
 
 before_install:
   - pip install --user cpp-coveralls
 install:
   - sudo apt-get install -y -qq lcov
+  - sudo apt-get install gnuplot
 script:
   - export CXX=$COMPILER;
   - mkdir build
@@ -36,7 +39,7 @@ script:
   - test/cpp-test
 
 after_success:
-  - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*"
+  - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.* -E ".*include/.*.h.*"
 
 notifications:
   email: false
