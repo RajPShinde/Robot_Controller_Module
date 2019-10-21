@@ -31,12 +31,12 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @section Implements Ackermann on PID control
  */
 #include <time.h>
-#include <gnuplot-iostream.h>
 
 #include <iostream>
 #include <fstream>
 #include <vector>
 
+#include "gnuplot-iostream.h"
 #include "Navigation.hpp"
 #include "SteerAlgorithm.hpp"
 
