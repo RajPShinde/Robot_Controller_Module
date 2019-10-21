@@ -30,16 +30,16 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @brief   Mid Term Project
  *  @section
  */
+#include <time.h>
+#include <gnuplot-iostream.h>
 
 #include <iostream>
-
-#include <fstream> 
-
-#include <time.h>
+#include <fstream>
+#include <vector>
 
 #include "Navigation.hpp"
-
 #include "SteerAlgorithm.hpp"
+
 
 Navigation::Navigation() {
 kp_ = 0.5;
@@ -52,12 +52,119 @@ previousError_ = 0;
 
 Navigation::~Navigation() {}
 
-//change is here
 double Navigation::calculate(double targetHeading,
-			     double currentVelocity, 				
-			     double setPoint,
-			     int flag) {
-double newVelocity=0;
+                             double currentVelocity,
+                             double setPoint,
+                             int flag) {
+double newVelocity = 0;
+double errorValue = 0;
+double propOutput = 0;
+double integralVal = 0;
+double intOutput = 0;
+double derivativeVal = 0;
+double derOutput = 0;
+double tempVel;
+int velocityConverged = 0;
+int headingConverged = 0;
+
+double outTime = 0;
+SteerAlgorithm Ackermann = SteerAlgorithm();
+Gnuplot gnu;
+std::vector<std::pair<double, double>> combinedXY(1, std::make_pair(0, 0));
+std::vector<std::pair<double, double>> points;
+std::vector<std::pair<double, double>> pointsVelocity;
+
+double tempHeading = targetHeading;
+
+gnu << "set xrange [0:2]\nset yrange [0:100]\n";
+gnu << "set title \"Steering angle Convergence\"\n";
+gnu << "set pointsize 1\n";
+gnu << "set xlabel \"Time\"\n";
+gnu << "set ylabel \"Heading Angle\"\n";
+gnu << "set key outside\n";
+while(velocityConverged != 1 && headingConverged != 1) {
+        errorValue = setPoint - currentVelocity;
+        propOutput = kp_ * errorValue;
+
+        integralVal += errorValue * diffTime_;
+        intOutput = ki_ * integralVal;
+
+        derivativeVal = ((errorValue - previousError_) / diffTime_);
+        derOutput = kd_ * derivativeVal;
+
+        newVelocity = currentVelocity + (propOutput + intOutput + derOutput);
+        previousError_ = errorValue;
+        currentVelocity = newVelocity;
+
+        clock_t toc = clock();
+        pointsVelocity.push_back(std::make_pair((
+                                 static_cast<double> (toc)/CLOCKS_PER_SEC),
+                                 currentVelocity));
+        std::cout << "Current Velocity: " << currentVelocity
+                  << " Setpoint: " << newVelocity << std::endl;
+        if (setPoint == newVelocity) {
+           velocityConverged = 1;
+        }
+        if ((targetHeading-heading) != 0 && velocityConverged == 1) {
+          if (newVelocity > maxTurnVelocity) {
+             tempVel = maxTurnVelocity;
+          }
+          tempVel = newVelocity;
+          if (targetHeading-heading > 0) {
+             dir = 1;
+          } else {
+             dir = -1;
+          }
+          Ackermann.changeWheelAngles(Ackermann.getCorrRadius_(),
+                                      shaftLength,
+                                      shaftDistance);
+          double arcLen = Ackermann.arcLength(targetHeading,
+                                      Ackermann.getCorrRadius_());
+          auto turnTime = Ackermann.turnTime(arcLen, newVelocity);
+          clock_t tic = clock();
+          while ((outTime < turnTime) && (targetHeading != heading)) {
+                errorValue = setPoint - currentVelocity;
+                propOutput = kp_ * errorValue;
+
+                integralVal += errorValue * diffTime_;
+                intOutput = ki_ * integralVal;
+
+                derivativeVal = ((errorValue - previousError_) / diffTime_);
+                derOutput = kd_ * derivativeVal;
+
+                newVelocity = currentVelocity +
+                                     (propOutput + intOutput + derOutput);
+                previousError_ = errorValue;
+                currentVelocity = newVelocity;
+
+                clock_t toc = clock();
+                outTime = (static_cast<double> (toc - tic)) / CLOCKS_PER_SEC;
+                double newArcLen = tempVel * outTime;
+                heading = (newArcLen * targetHeading / arcLen);
+
+                points.push_back(std::make_pair(
+                                  (static_cast<double> (toc)/CLOCKS_PER_SEC),
+                                   heading));
+                std::cout << "Current Velocity: " << currentVelocity
+                          << " Setpoint: " << newVelocity << std::endl;
+                std::cout << "Current Heading: " << heading
+                          << " Target: " << targetHeading << std::endl;
+          }
+        targetHeading = 0;
+        headingConverged = 1;
+        Ackermann.resetWheel();
+        }
+}
+if (flag == 2) {
+  gnu << "plot" << gnu.file1d(points) << "with points title 'Heading' lc 3, "
+      << tempHeading << " title 'Target Heading' lt 1 lc 4" << std::endl;
+return 0;
+} else if (flag == 1) {
+  return newVelocity;
+} else {
+  return heading;
+}
+
 return newVelocity;
 }
 
@@ -75,27 +182,27 @@ return kd_;
 
 bool Navigation::setKp_(double kp) {
 bool flag = true;
-kp_= kp;
-if (kp_ != kp){
-	flag=false;
+kp_ = kp;
+if (kp_ != kp) {
+    flag = false;
 }
 return flag;
 }
 
 bool Navigation::setKi_(double ki) {
 bool flag = true;
-ki_= ki;
-if (ki_ != ki){
-	flag=false;
+ki_ = ki;
+if (ki_ != ki) {
+    flag = false;
 }
 return flag;
 }
 
 bool Navigation::setKd_(double kd) {
 bool flag = true;
-kd_= kd;
-if (kd_ != kd){
-	flag=false;
+kd_ = kd;
+if (kd_ != kd) {
+    flag = false;
 }
 return flag;
 }
