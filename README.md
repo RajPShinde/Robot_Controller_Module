@@ -37,7 +37,7 @@ Log- https://docs.google.com/spreadsheets/d/1LFQMKbuGeusgmI7IMbjiw-RJrt9jNgej0F8
 
 ## Dependencies
 1. C++ 11/14/17
-2. gnuplot
+2. gnuplot- http://stahlke.org/dan/gnuplot-iostream/
 <br>Install gnuplot
 ```
 sudo apt-get install gnuplot

@@ -33,6 +33,7 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @brief   Mid Term Project
  *  @section Tests functionality of Navigation code
  */
+
 #include <gtest/gtest.h>
 
 #include <cstdlib>
