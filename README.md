@@ -1,6 +1,6 @@
 # Robot Controller Module
 [![Build Status](https://travis-ci.org/RajPShinde/Robot_Controller_Module.svg?branch=master)](https://travis-ci.org/RajPShinde/Robot_Controller_Module)
-[![Coverage Status](https://coveralls.io/repos/github/RajPShinde/Robot_Controller_Module/badge.svg?branch=8.0&service=github)](https://coveralls.io/github/RajPShinde/Robot_Controller_Module?branch=8.0)
+[![Coverage Status](https://coveralls.io/repos/github/RajPShinde/Robot_Controller_Module/badge.svg?branch=master&service=github)](https://coveralls.io/github/RajPShinde/Robot_Controller_Module?branch=master)
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/RajPShinde/Robot_Controller_Module/blob/master/LICENSE)
 [![Documentation](https://img.shields.io/badge/docs-generated-brightgreen.svg)](https://github.com/RajPShinde/Robot_Controller_Module/tree/master/docs)
 ---
