@@ -39,7 +39,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 /**
  *  @brief Class Navigation 
- *  Contains the methods of Pid Algorithm
+ *  Contains the methods of steer Algorithm
  */
 class Navigation : public SteerAlgorithm {
  private:
@@ -80,11 +80,11 @@ class Navigation : public SteerAlgorithm {
 
    /**
     *  @brief Function to display on Terminal
-    *  @param loc
-    *  @param currentVelocity
-    *  @param newVelocity
-    *  @param heading
-    *  @param targetHeading
+    *  @param int loc
+    *  @param double currentVelocity
+    *  @param double newVelocity
+    *  @param double heading
+    *  @param double targetHeading
     *  @return none
     */
     bool display(int loc, double currentVelocity, double newVelocity,
@@ -92,7 +92,10 @@ class Navigation : public SteerAlgorithm {
 
      /**
     *  @brief Function to draw graphs in gnuplot
-    *  @param none
+    *  @param vector<pair<double, double>> points
+    *  @param vector<pair<double, double>> pointsVelocity
+    *  @param double newVelocity
+    *  @param double tempHeading
     *  @return none
     */
     bool drawGraph(std::vector<std::pair<double, double>> points,

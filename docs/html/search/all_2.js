@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['getcorrradius_5f',['getCorrRadius_',['../class_steer_algorithm.html#a06a7dd049280fab40d1b54c912daf399',1,'SteerAlgorithm']]],
-  ['getkd_5f',['getKd_',['../class_navigation.html#ac6441bb601483166ef7a8081b76f634d',1,'Navigation']]],
-  ['getki_5f',['getKi_',['../class_navigation.html#a1a84392d6cce3f60df452ab482b5647c',1,'Navigation']]],
-  ['getkp_5f',['getKp_',['../class_navigation.html#ab1469d74f4838a9d32a8647d22701f9f',1,'Navigation']]]
+  ['calculate',['calculate',['../class_navigation.html#a0f83b511cec12a68f2c3466c40c5d3cb',1,'Navigation']]],
+  ['castinttextsender',['CastIntTextSender',['../structgnuplotio_1_1_cast_int_text_sender.html',1,'gnuplotio']]],
+  ['castinttextsender_3c_20char_20_3e',['CastIntTextSender&lt; char &gt;',['../structgnuplotio_1_1_cast_int_text_sender.html',1,'gnuplotio']]],
+  ['castinttextsender_3c_20signed_20char_20_3e',['CastIntTextSender&lt; signed char &gt;',['../structgnuplotio_1_1_cast_int_text_sender.html',1,'gnuplotio']]],
+  ['castinttextsender_3c_20unsigned_20char_20_3e',['CastIntTextSender&lt; unsigned char &gt;',['../structgnuplotio_1_1_cast_int_text_sender.html',1,'gnuplotio']]],
+  ['changewheelangles',['changeWheelAngles',['../class_steer_algorithm.html#a6067af69593713f561890ae8ad23f5ff',1,'SteerAlgorithm']]],
+  ['colunwrapno',['ColUnwrapNo',['../structgnuplotio_1_1_col_unwrap_no.html',1,'gnuplotio']]],
+  ['colunwrapyes',['ColUnwrapYes',['../structgnuplotio_1_1_col_unwrap_yes.html',1,'gnuplotio']]]
 ];

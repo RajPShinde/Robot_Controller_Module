@@ -1,0 +1,61 @@
+.TH "gnuplotio::Gnuplot" 3 "Mon Nov 25 2019" "Version 7.0" "Robot Controller Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::Gnuplot \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBgnuplotio::FileHandleWrapper\fP, and stream< boost::iostreams::file_descriptor_sink >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGnuplot\fP (const std::string &_cmd='')"
+.br
+.ti -1c
+.RI "\fBGnuplot\fP (FILE *_fh)"
+.br
+.ti -1c
+.RI "void \fBclearTmpfiles\fP ()"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > \fBGnuplot\fP & \fBsend\fP (const T &arg, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > \fBGnuplot\fP & \fBsendBinary\fP (const T &arg, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > std::string \fBbinfmt\fP (const T &arg, const std::string &arr_or_rec, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > std::string \fBfile\fP (const T &arg, std::string filename, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > std::string \fBbinaryFile\fP (const T &arg, std::string filename, const std::string &arr_or_rec, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T > \fBGnuplot\fP \fBGNUPLOT_DEPRECATE\fP ('use send1d or send2d')&send(const T &arg)"
+.br
+.ti -1c
+.RI "template<typename T > std::string \fBGNUPLOT_DEPRECATE\fP ('use binfmt1d or binfmt2d') binfmt(const T &arg"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string const std::string & \fBarr_or_rec\fP"
+.br
+.ti -1c
+.RI "std::vector< int > \fBtmp_files\fP"
+.br
+.ti -1c
+.RI "bool \fBdebug_messages\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

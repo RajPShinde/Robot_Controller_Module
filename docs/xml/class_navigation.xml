@@ -3,6 +3,7 @@
   <compounddef id="class_navigation" kind="class" language="C++" prot="public">
     <compoundname>Navigation</compoundname>
     <basecompoundref refid="class_steer_algorithm" prot="public" virt="non-virtual">SteerAlgorithm</basecompoundref>
+    <derivedcompoundref refid="class_mock_navigation" prot="public" virt="non-virtual">MockNavigation</derivedcompoundref>
     <includes refid="_navigation_8hpp" local="no">Navigation.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_navigation_1ae4793f641072096ff84a3fc0a388b639" prot="private" static="no" mutable="no">
@@ -16,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="44" column="1" bodyfile="include/Navigation.hpp" bodystart="44" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="46" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_navigation_1a725134611ed3d9f29512f5ad707f58f9" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -29,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="44" column="1" bodyfile="include/Navigation.hpp" bodystart="44" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="46" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_navigation_1ad0199044c6517af38ad77594321e6bcd" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -42,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="44" column="1" bodyfile="include/Navigation.hpp" bodystart="44" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="46" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_navigation_1a5748c5ebeea7a4142ca9aaf3f4c8cd78" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -55,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="44" column="1" bodyfile="include/Navigation.hpp" bodystart="44" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="46" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_navigation_1aaad61568f4da45d5b32ea63a72bbb6a9" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -68,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="44" column="1" bodyfile="include/Navigation.hpp" bodystart="44" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="46" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_navigation_1a6f7165404d8b4467f8372c0cbc657e93" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -81,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="44" column="1" bodyfile="include/Navigation.hpp" bodystart="44" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="46" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_navigation_1ab3e90b24e7f7e8fea9710d548404f269" prot="private" static="no" mutable="no">
         <type>const double</type>
@@ -95,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="45" column="1" bodyfile="include/Navigation.hpp" bodystart="45" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="47" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" bodystart="47" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -111,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="48" column="1" bodyfile="include/Navigation.hpp" bodystart="48" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="50" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" bodystart="50" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -123,10 +124,10 @@
         <briefdescription>
 <para>Constructor of class <ref refid="class_navigation" kindref="compound">Navigation</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Constructor of class <ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref>. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="53" column="1" bodyfile="app/Navigation.cpp" bodystart="46" bodyend="54"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="55" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="43" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="class_navigation_1addd4022d716df48f4e55a1db69361ba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -136,10 +137,10 @@
         <briefdescription>
 <para>Destructor of class <ref refid="class_navigation" kindref="compound">Navigation</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Destructor of class <ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref>. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="58" column="1" bodyfile="app/Navigation.cpp" bodystart="59" bodyend="59"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="60" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="53" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_navigation_1a0f83b511cec12a68f2c3466c40c5d3cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -198,7 +199,160 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="69" column="1" bodyfile="app/Navigation.cpp" bodystart="70" bodyend="200"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="71" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="55" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navigation_1af6a893750980a747eccf700e22d2cbae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Navigation::setupGraph</definition>
+        <argsstring>()</argsstring>
+        <name>setupGraph</name>
+        <briefdescription>
+<para>Function to set graph parameters. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="79" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="180" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navigation_1a8a2193deb9aff2804453b8cf585691c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Navigation::display</definition>
+        <argsstring>(int loc, double currentVelocity, double newVelocity, double heading, double targetHeading)</argsstring>
+        <name>display</name>
+        <param>
+          <type>int</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentVelocity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>newVelocity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>heading</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>targetHeading</declname>
+        </param>
+        <briefdescription>
+<para>Function to display on Terminal. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>loc </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>currentVelocity </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>newVelocity </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>targetHeading </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="90" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="201" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navigation_1a95c972751207516ff0d85af6d42e75f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Navigation::drawGraph</definition>
+        <argsstring>(std::vector&lt; std::pair&lt; double, double &gt;&gt; points, std::vector&lt; std::pair&lt; double, double &gt;&gt; pointsVelocity, double newVelocity, double tempHeading)</argsstring>
+        <name>drawGraph</name>
+        <param>
+          <type>std::vector&lt; std::pair&lt; double, double &gt;&gt;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::pair&lt; double, double &gt;&gt;</type>
+          <declname>pointsVelocity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>newVelocity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tempHeading</declname>
+        </param>
+        <briefdescription>
+<para>Function to draw graphs in gnuplot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector&lt;pair&lt;double</parametername>
+<parametername>double&gt;&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector&lt;pair&lt;double</parametername>
+<parametername>double&gt;&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointsVelocity </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>newVelocity </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tempHeading </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="101" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="215" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="class_navigation_1ab1469d74f4838a9d32a8647d22701f9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -220,7 +374,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="77" column="1" bodyfile="app/Navigation.cpp" bodystart="207" bodyend="209"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="110" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="231" bodyend="233"/>
       </memberdef>
       <memberdef kind="function" id="class_navigation_1a1a84392d6cce3f60df452ab482b5647c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -242,7 +396,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="84" column="1" bodyfile="app/Navigation.cpp" bodystart="216" bodyend="218"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="117" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="235" bodyend="237"/>
       </memberdef>
       <memberdef kind="function" id="class_navigation_1ac6441bb601483166ef7a8081b76f634d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -264,7 +418,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="91" column="1" bodyfile="app/Navigation.cpp" bodystart="225" bodyend="227"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="124" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="239" bodyend="241"/>
       </memberdef>
       <memberdef kind="function" id="class_navigation_1a6dd95f46ff4ecc69895452a1879c30af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -290,7 +444,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="98" column="1" bodyfile="app/Navigation.cpp" bodystart="234" bodyend="241"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="131" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="243" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="class_navigation_1a539d10206ceb162171e39c36e8aa8f0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -316,7 +470,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="105" column="1" bodyfile="app/Navigation.cpp" bodystart="248" bodyend="255"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="138" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="252" bodyend="259"/>
       </memberdef>
       <memberdef kind="function" id="class_navigation_1a4986e4357d9707ddf92cf8f559ef3dce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -342,46 +496,54 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Navigation.hpp" line="112" column="1" bodyfile="app/Navigation.cpp" bodystart="262" bodyend="269"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="145" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/Navigation.cpp" bodystart="261" bodyend="268"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Class <ref refid="class_navigation" kindref="compound">Navigation</ref> Contains the methods of Pid Algorithm. </para>    </briefdescription>
+<para>Class <ref refid="class_navigation" kindref="compound">Navigation</ref> Contains the methods of steer Algorithm. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7">
-        <label>Navigation</label>
-        <link refid="class_navigation"/>
-        <childnode refid="8" relation="public-inheritance">
+      <node id="397">
+        <label>MockNavigation</label>
+        <link refid="class_mock_navigation"/>
+        <childnode refid="395" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8">
+      <node id="395">
+        <label>Navigation</label>
+        <link refid="class_navigation"/>
+        <childnode refid="396" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="396">
         <label>SteerAlgorithm</label>
         <link refid="class_steer_algorithm"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9">
+      <node id="398">
         <label>Navigation</label>
         <link refid="class_navigation"/>
-        <childnode refid="10" relation="public-inheritance">
+        <childnode refid="399" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10">
+      <node id="399">
         <label>SteerAlgorithm</label>
         <link refid="class_steer_algorithm"/>
       </node>
     </collaborationgraph>
-    <location file="include/Navigation.hpp" line="42" column="1" bodyfile="include/Navigation.hpp" bodystart="42" bodyend="113"/>
+    <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" line="44" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/Navigation.hpp" bodystart="44" bodyend="146"/>
     <listofallmembers>
       <member refid="class_steer_algorithm_1a17ff78af17e900f752237d274bcf751d" prot="public" virt="non-virtual"><scope>Navigation</scope><name>arcLength</name></member>
       <member refid="class_navigation_1a0f83b511cec12a68f2c3466c40c5d3cb" prot="public" virt="non-virtual"><scope>Navigation</scope><name>calculate</name></member>
       <member refid="class_steer_algorithm_1a6067af69593713f561890ae8ad23f5ff" prot="public" virt="non-virtual"><scope>Navigation</scope><name>changeWheelAngles</name></member>
       <member refid="class_navigation_1a5748c5ebeea7a4142ca9aaf3f4c8cd78" prot="private" virt="non-virtual"><scope>Navigation</scope><name>diffTime_</name></member>
       <member refid="class_steer_algorithm_1af6ad5604b62eec22cc2d385c7683d019" prot="public" virt="non-virtual"><scope>Navigation</scope><name>dir</name></member>
+      <member refid="class_navigation_1a8a2193deb9aff2804453b8cf585691c0" prot="public" virt="non-virtual"><scope>Navigation</scope><name>display</name></member>
+      <member refid="class_navigation_1a95c972751207516ff0d85af6d42e75f7" prot="public" virt="non-virtual"><scope>Navigation</scope><name>drawGraph</name></member>
       <member refid="class_navigation_1aaad61568f4da45d5b32ea63a72bbb6a9" prot="private" virt="non-virtual"><scope>Navigation</scope><name>error_</name></member>
-      <member refid="class_steer_algorithm_1a06a7dd049280fab40d1b54c912daf399" prot="public" virt="non-virtual"><scope>Navigation</scope><name>getCorrRadius_</name></member>
+      <member refid="class_steer_algorithm_1a3ab412260c2457994f1180623862584b" prot="public" virt="non-virtual"><scope>Navigation</scope><name>getCorrRadius</name></member>
       <member refid="class_navigation_1ac6441bb601483166ef7a8081b76f634d" prot="public" virt="non-virtual"><scope>Navigation</scope><name>getKd_</name></member>
       <member refid="class_navigation_1a1a84392d6cce3f60df452ab482b5647c" prot="public" virt="non-virtual"><scope>Navigation</scope><name>getKi_</name></member>
       <member refid="class_navigation_1ab1469d74f4838a9d32a8647d22701f9f" prot="public" virt="non-virtual"><scope>Navigation</scope><name>getKp_</name></member>
@@ -395,10 +557,11 @@
       <member refid="class_navigation_1a81fdffdefe46340da5fa6c570066b42b" prot="public" virt="non-virtual"><scope>Navigation</scope><name>Navigation</name></member>
       <member refid="class_navigation_1a6f7165404d8b4467f8372c0cbc657e93" prot="private" virt="non-virtual"><scope>Navigation</scope><name>previousError_</name></member>
       <member refid="class_steer_algorithm_1ab251b6fd1f88fb7a526b0d55cd12625b" prot="public" virt="non-virtual"><scope>Navigation</scope><name>resetWheel</name></member>
-      <member refid="class_steer_algorithm_1a93cf1fc7d06376ddeaa4e81f2b0a22cc" prot="public" virt="non-virtual"><scope>Navigation</scope><name>setCorrRadius_</name></member>
+      <member refid="class_steer_algorithm_1a2314874a6f7252823e994e0e8b0a6b38" prot="public" virt="non-virtual"><scope>Navigation</scope><name>setCorrRadius</name></member>
       <member refid="class_navigation_1a4986e4357d9707ddf92cf8f559ef3dce" prot="public" virt="non-virtual"><scope>Navigation</scope><name>setKd_</name></member>
       <member refid="class_navigation_1a539d10206ceb162171e39c36e8aa8f0f" prot="public" virt="non-virtual"><scope>Navigation</scope><name>setKi_</name></member>
       <member refid="class_navigation_1a6dd95f46ff4ecc69895452a1879c30af" prot="public" virt="non-virtual"><scope>Navigation</scope><name>setKp_</name></member>
+      <member refid="class_navigation_1af6a893750980a747eccf700e22d2cbae" prot="public" virt="non-virtual"><scope>Navigation</scope><name>setupGraph</name></member>
       <member refid="class_steer_algorithm_1a38bc87552a30e8eda8f647cf341c9657" prot="public" virt="non-virtual"><scope>Navigation</scope><name>shaftDistance</name></member>
       <member refid="class_steer_algorithm_1a9d5bc20acba39f0e53c3d0f6fc280433" prot="public" virt="non-virtual"><scope>Navigation</scope><name>shaftLength</name></member>
       <member refid="class_steer_algorithm_1af64dd94816ab9d00d85227a42b26a3e8" prot="public" virt="non-virtual"><scope>Navigation</scope><name>SteerAlgorithm</name></member>

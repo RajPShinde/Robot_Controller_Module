@@ -39,7 +39,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 #include "Navigation.hpp"
 
 /**
- *  @brief Mock avigation class 
+ *  @brief Mock Navigation class 
  */
 class MockNavigation: public Navigation{
  public :

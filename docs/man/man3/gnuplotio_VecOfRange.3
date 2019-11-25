@@ -1,0 +1,58 @@
+.TH "gnuplotio::VecOfRange< RT >" 3 "Mon Nov 25 2019" "Version 7.0" "Robot Controller Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::VecOfRange< RT > \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< typename RT::value_type > \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBVecOfRange\fP< typename RT::subiter_type > \fBsubiter_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVecOfRange\fP (const std::vector< RT > &_rvec)"
+.br
+.ti -1c
+.RI "bool \fBis_end\fP () const "
+.br
+.ti -1c
+.RI "void \fBinc\fP ()"
+.br
+.ti -1c
+.RI "value_type \fBderef\fP () const "
+.br
+.ti -1c
+.RI "\fBsubiter_type\fP \fBderef_subiter\fP () const "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const bool \fBis_container\fP = RT::is_container"
+.br
+.ti -1c
+.RI "static const bool \fBallow_auto_unwrap\fP = false"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , typename PrintMode > void \fBderef_and_print\fP (std::ostream &, const \fBVecOfRange\fP< T > &, PrintMode)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

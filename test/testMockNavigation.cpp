@@ -31,14 +31,12 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include <vector>
 #include <iostream>
 #include "MockNavigation.hpp"
 #include "Navigation.hpp"
 
 /**
- *  @def TEST(MockNavigation, checkKp)
- *  @brief Test Kp through gmock
+ *  @brief Test Kp and calculate using gmock
  */
 TEST(MockNavigation, testGetKp) {
 MockNavigation o;
@@ -50,7 +48,8 @@ MockNavigation o;
 TEST(MockNavigation, testCalculate) {
 MockNavigation o;
 //  Expect a call to compute method
-EXPECT_CALL(o, calculate(90, 10, 40, 1)).Times(2);
-o.calculate(90, 10, 40, 1);
-EXPECT_EQ(o.calculate(90, 10, 40, 1), 0);
+EXPECT_CALL(o, calculate(120, 10, 0, 1)).Times(2);
+o.calculate(120, 10, 0, 1);
+// Check the returned value with expected value
+EXPECT_EQ(o.calculate(120, 10, 0, 1), 0);
 }

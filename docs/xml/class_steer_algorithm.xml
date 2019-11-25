@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="42" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="42" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="42" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_steer_algorithm_1aae81f0898e0a2d367cf3faf0f0da7b02" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="43" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="43" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="43" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_steer_algorithm_1a5b60157d81095e086e3bdd3f28a9f622" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -43,20 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="43" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="43" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_steer_algorithm_1a31dc572c7f395bd466043f500e60b936" prot="private" static="no" mutable="no">
-        <type>double</type>
-        <definition>double SteerAlgorithm::robotAngle_</definition>
-        <argsstring></argsstring>
-        <name>robotAngle_</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="43" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="43" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="43" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_steer_algorithm_1a4453460d4620dfdb1a379b12221064d3" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -69,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="43" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="43" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="43" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="43" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -85,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="46" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="46" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="46" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_steer_algorithm_1a38bc87552a30e8eda8f647cf341c9657" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -99,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="47" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="47" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="47" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_steer_algorithm_1acfce52839329f0ebb316f633494466e1" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -113,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="48" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="48" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="48" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_steer_algorithm_1ada73b1f087245af5cda5d1d6b9be7d31" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -126,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="49" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="49" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="49" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_steer_algorithm_1a071efeb53e86ee949940b0ab10986044" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -139,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="50" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="50" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="50" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_steer_algorithm_1af6ad5604b62eec22cc2d385c7683d019" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -152,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="51" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="51" bodyend="-1"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="51" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="51" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -167,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="55" column="1" bodyfile="app/SteerAlgorithm.cpp" bodystart="44" bodyend="53"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="55" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/SteerAlgorithm.cpp" bodystart="43" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="class_steer_algorithm_1a37dd2ef0ed856582aaacc103a6cd6700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -180,13 +167,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="60" column="1" bodyfile="app/SteerAlgorithm.cpp" bodystart="58" bodyend="58"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="60" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/SteerAlgorithm.cpp" bodystart="53" bodyend="53"/>
       </memberdef>
-      <memberdef kind="function" id="class_steer_algorithm_1a06a7dd049280fab40d1b54c912daf399" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_steer_algorithm_1a3ab412260c2457994f1180623862584b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
-        <definition>double SteerAlgorithm::getCorrRadius_</definition>
+        <definition>double SteerAlgorithm::getCorrRadius</definition>
         <argsstring>()</argsstring>
-        <name>getCorrRadius_</name>
+        <name>getCorrRadius</name>
         <briefdescription>
 <para>Function to get corresponding radius in meters. </para>        </briefdescription>
         <detaileddescription>
@@ -202,13 +189,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="67" column="1" bodyfile="app/SteerAlgorithm.cpp" bodystart="65" bodyend="67"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="67" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/SteerAlgorithm.cpp" bodystart="55" bodyend="57"/>
       </memberdef>
-      <memberdef kind="function" id="class_steer_algorithm_1a93cf1fc7d06376ddeaa4e81f2b0a22cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_steer_algorithm_1a2314874a6f7252823e994e0e8b0a6b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool SteerAlgorithm::setCorrRadius_</definition>
+        <definition>bool SteerAlgorithm::setCorrRadius</definition>
         <argsstring>(double r)</argsstring>
-        <name>setCorrRadius_</name>
+        <name>setCorrRadius</name>
         <param>
           <type>double</type>
           <declname>r</declname>
@@ -228,7 +215,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="74" column="1" bodyfile="app/SteerAlgorithm.cpp" bodystart="74" bodyend="81"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="74" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/SteerAlgorithm.cpp" bodystart="59" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="class_steer_algorithm_1a17ff78af17e900f752237d274bcf751d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -265,7 +252,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="84" column="1" bodyfile="app/SteerAlgorithm.cpp" bodystart="91" bodyend="101"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="84" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/SteerAlgorithm.cpp" bodystart="69" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="class_steer_algorithm_1a6067af69593713f561890ae8ad23f5ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -285,7 +272,7 @@
           <declname>shaftDistance</declname>
         </param>
         <briefdescription>
-<para>Function to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servos. </para>        </briefdescription>
+<para>Function to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servo. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -313,7 +300,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="96" column="1" bodyfile="app/SteerAlgorithm.cpp" bodystart="113" bodyend="129"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="96" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/SteerAlgorithm.cpp" bodystart="82" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="class_steer_algorithm_1ab251b6fd1f88fb7a526b0d55cd12625b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -335,7 +322,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="104" column="1" bodyfile="app/SteerAlgorithm.cpp" bodystart="136" bodyend="144"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="104" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/SteerAlgorithm.cpp" bodystart="101" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="class_steer_algorithm_1aefdb433f65c47bf6e0d6af5de98c8f5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -372,7 +359,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/SteerAlgorithm.hpp" line="113" column="1" bodyfile="app/SteerAlgorithm.cpp" bodystart="153" bodyend="155"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="113" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/app/SteerAlgorithm.cpp" bodystart="112" bodyend="115"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -380,31 +367,36 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="12">
-        <label>Navigation</label>
-        <link refid="class_navigation"/>
-        <childnode refid="11" relation="public-inheritance">
+      <node id="408">
+        <label>MockNavigation</label>
+        <link refid="class_mock_navigation"/>
+        <childnode refid="407" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11">
+      <node id="407">
+        <label>Navigation</label>
+        <link refid="class_navigation"/>
+        <childnode refid="406" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="406">
         <label>SteerAlgorithm</label>
         <link refid="class_steer_algorithm"/>
       </node>
     </inheritancegraph>
-    <location file="include/SteerAlgorithm.hpp" line="40" column="1" bodyfile="include/SteerAlgorithm.hpp" bodystart="40" bodyend="114"/>
+    <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" line="40" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/include/SteerAlgorithm.hpp" bodystart="40" bodyend="114"/>
     <listofallmembers>
       <member refid="class_steer_algorithm_1a17ff78af17e900f752237d274bcf751d" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>arcLength</name></member>
       <member refid="class_steer_algorithm_1a6067af69593713f561890ae8ad23f5ff" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>changeWheelAngles</name></member>
       <member refid="class_steer_algorithm_1a4453460d4620dfdb1a379b12221064d3" prot="private" virt="non-virtual"><scope>SteerAlgorithm</scope><name>corrRadius_</name></member>
       <member refid="class_steer_algorithm_1af6ad5604b62eec22cc2d385c7683d019" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>dir</name></member>
-      <member refid="class_steer_algorithm_1a06a7dd049280fab40d1b54c912daf399" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>getCorrRadius_</name></member>
+      <member refid="class_steer_algorithm_1a3ab412260c2457994f1180623862584b" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>getCorrRadius</name></member>
       <member refid="class_steer_algorithm_1ada73b1f087245af5cda5d1d6b9be7d31" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>heading</name></member>
       <member refid="class_steer_algorithm_1aae81f0898e0a2d367cf3faf0f0da7b02" prot="private" virt="non-virtual"><scope>SteerAlgorithm</scope><name>lWheelAngle_</name></member>
       <member refid="class_steer_algorithm_1acfce52839329f0ebb316f633494466e1" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>maxTurnVelocity</name></member>
       <member refid="class_steer_algorithm_1ab251b6fd1f88fb7a526b0d55cd12625b" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>resetWheel</name></member>
-      <member refid="class_steer_algorithm_1a31dc572c7f395bd466043f500e60b936" prot="private" virt="non-virtual"><scope>SteerAlgorithm</scope><name>robotAngle_</name></member>
       <member refid="class_steer_algorithm_1a5b60157d81095e086e3bdd3f28a9f622" prot="private" virt="non-virtual"><scope>SteerAlgorithm</scope><name>rWheelAngle_</name></member>
-      <member refid="class_steer_algorithm_1a93cf1fc7d06376ddeaa4e81f2b0a22cc" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>setCorrRadius_</name></member>
+      <member refid="class_steer_algorithm_1a2314874a6f7252823e994e0e8b0a6b38" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>setCorrRadius</name></member>
       <member refid="class_steer_algorithm_1a38bc87552a30e8eda8f647cf341c9657" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>shaftDistance</name></member>
       <member refid="class_steer_algorithm_1a9d5bc20acba39f0e53c3d0f6fc280433" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>shaftLength</name></member>
       <member refid="class_steer_algorithm_1af64dd94816ab9d00d85227a42b26a3e8" prot="public" virt="non-virtual"><scope>SteerAlgorithm</scope><name>SteerAlgorithm</name></member>

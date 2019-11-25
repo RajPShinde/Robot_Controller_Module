@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Wextra -Wpedantic -g   CMakeFiles/shell-app.dir/main.cpp.o CMakeFiles/shell-app.dir/Navigation.cpp.o CMakeFiles/shell-app.dir/SteerAlgorithm.cpp.o  -o shell-app -rdynamic -lboost_filesystem -lboost_system -lboost_iostreams -lboost_regex 

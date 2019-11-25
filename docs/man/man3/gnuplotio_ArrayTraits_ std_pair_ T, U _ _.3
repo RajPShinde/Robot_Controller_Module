@@ -1,0 +1,48 @@
+.TH "gnuplotio::ArrayTraits< std::pair< T, U > >" 3 "Mon Nov 25 2019" "Version 7.0" "Robot Controller Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::ArrayTraits< std::pair< T, U > > \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBPairOfRange\fP< typename \fBArrayTraits\fP< T >::\fBrange_type\fP, typename \fBArrayTraits\fP< U >::\fBrange_type\fP > \fBrange_type\fP"
+.br
+.ti -1c
+.RI "typedef std::pair< typename \fBArrayTraits\fP< T >::value_type, typename \fBArrayTraits\fP< U >::value_type > \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBrange_type\fP \fBget_range\fP (const std::pair< T, U > &arg)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const bool \fBis_container\fP = \fBArrayTraits\fP<T>::is_container && \fBArrayTraits\fP<U>::is_container"
+.br
+.ti -1c
+.RI "static const bool \fBallow_auto_unwrap\fP = false"
+.br
+.ti -1c
+.RI "static const size_t \fBl_depth\fP = \fBArrayTraits\fP<T>::depth"
+.br
+.ti -1c
+.RI "static const size_t \fBr_depth\fP = \fBArrayTraits\fP<U>::depth"
+.br
+.ti -1c
+.RI "static const size_t \fBdepth\fP = (l_depth < r_depth) ? l_depth : r_depth"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

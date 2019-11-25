@@ -1,0 +1,55 @@
+.TH "gnuplotio::PairOfRange< RT, RU >" 3 "Mon Nov 25 2019" "Version 7.0" "Robot Controller Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::PairOfRange< RT, RU > \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::pair< typename RT::value_type, typename RU::value_type > \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBPairOfRange\fP< typename RT::subiter_type, typename RU::subiter_type > \fBsubiter_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPairOfRange\fP (const RT &_l, const RU &_r)"
+.br
+.ti -1c
+.RI "bool \fBis_end\fP () const "
+.br
+.ti -1c
+.RI "void \fBinc\fP ()"
+.br
+.ti -1c
+.RI "value_type \fBderef\fP () const "
+.br
+.ti -1c
+.RI "\fBsubiter_type\fP \fBderef_subiter\fP () const "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const bool \fBis_container\fP = RT::is_container && RU::is_container"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , typename U , typename PrintMode > void \fBderef_and_print\fP (std::ostream &, const \fBPairOfRange\fP< T, U > &, PrintMode)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

@@ -96,7 +96,7 @@ while(velocityConverged != 1 && headingConverged != 1) {
 
         //  store the current values in a vector for plotting
         pointsVelocity.push_back(std::make_pair((
-                          static_cast<double> (clock())/CLOCKS_PER_SEC),
+                          static_cast<double> (toc)/CLOCKS_PER_SEC),
                           currentVelocity));
         if (flag == 2) {
         //  show the values on screen
@@ -148,7 +148,7 @@ while(velocityConverged != 1 && headingConverged != 1) {
 
                 //  store the current values in a vector for plotting
                 points.push_back(std::make_pair(
-                  (static_cast<double> (clock())/CLOCKS_PER_SEC),
+                  (static_cast<double> (toc)/CLOCKS_PER_SEC),
                     heading));
                 if (flag == 2) {
                 display(2, currentVelocity, newVelocity, heading,

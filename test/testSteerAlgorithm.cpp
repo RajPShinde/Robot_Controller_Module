@@ -57,6 +57,7 @@ EXPECT_LT(tests.getCorrRadius(), 150);
  */
 TEST(SteerAlgorithm, testwheel) {
 SteerAlgorithm tests;
+// test the wheel angles
 EXPECT_TRUE(tests.resetWheel());
 EXPECT_LT(tests.changeWheelAngles(10, 4, 8), 46);
 }
@@ -67,6 +68,7 @@ EXPECT_LT(tests.changeWheelAngles(10, 4, 8), 46);
  */
 TEST(SteerAlgorithm, testCalculations) {
 SteerAlgorithm tests;
+// tet the ackermann variables
 EXPECT_LT(tests.arcLength(360, 10), 70);
 EXPECT_GT(tests.turnTime(100, 20), 0);
 }

@@ -1,0 +1,30 @@
+.TH "gnuplotio::ArrayTraits< T, typename boost::enable_if< is_like_stl_container< T > >::type >" 3 "Mon Nov 25 2019" "Version 7.0" "Robot Controller Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::ArrayTraits< T, typename boost::enable_if< is_like_stl_container< T > >::type > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBgnuplotio::ArrayTraitsDefaults< T::value_type >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBIteratorRange\fP< typename T::const_iterator, typename T::value_type > \fBrange_type\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBrange_type\fP \fBget_range\fP (const T &arg)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

@@ -24,7 +24,7 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @file    SteerAlgorithm.hpp
  *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
  *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
- *  @date    10/10/2019
+ *  @date    11/25/2019
  *  @version 6.0
  *  @brief   Mid Term Project
  *  @section Ackermann Steering Control Header file

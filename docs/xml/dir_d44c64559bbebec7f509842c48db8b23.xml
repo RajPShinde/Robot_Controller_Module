@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
-    <compoundname>include</compoundname>
+    <compoundname>/home/rajshinde/GMOCK/Robot_Controller_Module/include</compoundname>
+    <innerfile refid="gnuplot-iostream_8h">gnuplot-iostream.h</innerfile>
+    <innerfile refid="_mock_navigation_8hpp">MockNavigation.hpp</innerfile>
     <innerfile refid="_navigation_8hpp">Navigation.hpp</innerfile>
     <innerfile refid="_steer_algorithm_8hpp">SteerAlgorithm.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/"/>
+    <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/include/"/>
   </compounddef>
 </doxygen>

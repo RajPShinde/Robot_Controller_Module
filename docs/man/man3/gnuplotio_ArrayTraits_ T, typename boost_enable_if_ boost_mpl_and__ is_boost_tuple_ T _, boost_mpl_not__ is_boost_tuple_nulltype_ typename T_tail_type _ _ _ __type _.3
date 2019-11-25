@@ -1,0 +1,36 @@
+.TH "gnuplotio::ArrayTraits< T, typename boost::enable_if< boost::mpl::and_< is_boost_tuple< T >, boost::mpl::not_< is_boost_tuple_nulltype< typename T::tail_type > > > >::type >" 3 "Mon Nov 25 2019" "Version 7.0" "Robot Controller Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::ArrayTraits< T, typename boost::enable_if< boost::mpl::and_< is_boost_tuple< T >, boost::mpl::not_< is_boost_tuple_nulltype< typename T::tail_type > > > >::type > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBgnuplotio::ArrayTraits< std::pair< T::head_type, T::tail_type > >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef T::head_type \fBHT\fP"
+.br
+.ti -1c
+.RI "typedef T::tail_type \fBTT\fP"
+.br
+.ti -1c
+.RI "typedef \fBArrayTraits\fP< typename std::pair< HT, TT > > \fBparent\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBparent::range_type\fP \fBget_range\fP (const T &arg)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

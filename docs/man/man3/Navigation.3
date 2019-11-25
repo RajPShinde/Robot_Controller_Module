@@ -1,8 +1,8 @@
-.TH "Navigation" 3 "Mon Oct 21 2019" "Version 5" "Ackermann Steering Control" \" -*- nroff -*-
+.TH "Navigation" 3 "Mon Nov 25 2019" "Version 7.0" "Robot Controller Module" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Navigation \- Class \fBNavigation\fP Contains the methods of Pid Algorithm\&.  
+Navigation \- Class \fBNavigation\fP Contains the methods of steer Algorithm\&.  
 
 .SH SYNOPSIS
 .br
@@ -11,6 +11,8 @@ Navigation \- Class \fBNavigation\fP Contains the methods of Pid Algorithm\&.
 \fC#include <Navigation\&.hpp>\fP
 .PP
 Inherits \fBSteerAlgorithm\fP\&.
+.PP
+Inherited by \fBMockNavigation\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -26,6 +28,18 @@ Inherits \fBSteerAlgorithm\fP\&.
 .RI "double \fBcalculate\fP (double targetHeading, double currentVelocity, double setPoint, int flag)"
 .br
 .RI "\fIFunction to calculate new velocity in m/s with a PID Algorithm using kp, ki & kd\&. \fP"
+.ti -1c
+.RI "bool \fBsetupGraph\fP ()"
+.br
+.RI "\fIFunction to set graph parameters\&. \fP"
+.ti -1c
+.RI "bool \fBdisplay\fP (int loc, double currentVelocity, double newVelocity, double heading, double targetHeading)"
+.br
+.RI "\fIFunction to display on Terminal\&. \fP"
+.ti -1c
+.RI "bool \fBdrawGraph\fP (std::vector< std::pair< double, double >> points, std::vector< std::pair< double, double >> pointsVelocity, double newVelocity, double tempHeading)"
+.br
+.RI "\fIFunction to draw graphs in gnuplot\&. \fP"
 .ti -1c
 .RI "double \fBgetKp_\fP ()"
 .br
@@ -60,17 +74,7 @@ Inherits \fBSteerAlgorithm\fP\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Class \fBNavigation\fP Contains the methods of Pid Algorithm\&. 
-.SH "Constructor & Destructor Documentation"
-.PP 
-.SS "Navigation::Navigation ()"
-
-.PP
-Constructor of class \fBNavigation\fP\&. Constructor of class \fBSteerAlgorithm\fP\&. 
-.SS "Navigation::~Navigation ()"
-
-.PP
-Destructor of class \fBNavigation\fP\&. Destructor of class \fBSteerAlgorithm\fP\&. 
+Class \fBNavigation\fP Contains the methods of steer Algorithm\&. 
 .SH "Member Function Documentation"
 .PP 
 .SS "double Navigation::calculate (double targetHeading, double currentVelocity, double setPoint, int flag)"
@@ -92,6 +96,52 @@ Function to calculate new velocity in m/s with a PID Algorithm using kp, ki & kd
 \fBReturns:\fP
 .RS 4
 double newVelocity 
+.RE
+.PP
+
+.SS "bool Navigation::display (int loc, double currentVelocity, double newVelocity, double heading, double targetHeading)"
+
+.PP
+Function to display on Terminal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint\fP loc 
+.br
+\fIdouble\fP currentVelocity 
+.br
+\fIdouble\fP newVelocity 
+.br
+\fIdouble\fP heading 
+.br
+\fIdouble\fP targetHeading 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "bool Navigation::drawGraph (std::vector< std::pair< double, double >> points, std::vector< std::pair< double, double >> pointsVelocity, double newVelocity, double tempHeading)"
+
+.PP
+Function to draw graphs in gnuplot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvector<pair<double,double>>\fP points 
+.br
+\fIvector<pair<double,double>>\fP pointsVelocity 
+.br
+\fIdouble\fP newVelocity 
+.br
+\fIdouble\fP tempHeading 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
 .RE
 .PP
 
@@ -191,7 +241,23 @@ boolean true
 .RE
 .PP
 
+.SS "bool Navigation::setupGraph ()"
+
+.PP
+Function to set graph parameters\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Ackermann Steering Control from the source code\&.
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

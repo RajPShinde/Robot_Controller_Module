@@ -7,29 +7,29 @@
     <includes local="no">memory</includes>
     <includes refid="_steer_algorithm_8hpp" local="yes">SteerAlgorithm.hpp</includes>
     <incdepgraph>
-      <node id="90">
-        <label>test/testSteerAlgorithm.cpp</label>
-        <link refid="testSteerAlgorithm.cpp"/>
-        <childnode refid="91" relation="include">
-        </childnode>
-        <childnode refid="92" relation="include">
-        </childnode>
-        <childnode refid="93" relation="include">
-        </childnode>
-        <childnode refid="94" relation="include">
-        </childnode>
-      </node>
-      <node id="94">
+      <node id="187">
         <label>SteerAlgorithm.hpp</label>
         <link refid="_steer_algorithm_8hpp"/>
       </node>
-      <node id="91">
+      <node id="183">
+        <label>/home/rajshinde/GMOCK/Robot_Controller_Module/test/testSteerAlgorithm.cpp</label>
+        <link refid="testSteerAlgorithm.cpp"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+      <node id="184">
         <label>gtest/gtest.h</label>
       </node>
-      <node id="92">
+      <node id="185">
         <label>cstdlib</label>
       </node>
-      <node id="93">
+      <node id="186">
         <label>memory</label>
       </node>
     </incdepgraph>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test/testSteerAlgorithm.cpp" line="47" column="1" bodyfile="test/testSteerAlgorithm.cpp" bodystart="47" bodyend="51"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/test/testSteerAlgorithm.cpp" line="47" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/test/testSteerAlgorithm.cpp" bodystart="47" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="test_steer_algorithm_8cpp_1ab38a7e56f4e7418febe58d9daf9e4b58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test/testSteerAlgorithm.cpp" line="58" column="1" bodyfile="test/testSteerAlgorithm.cpp" bodystart="58" bodyend="62"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/test/testSteerAlgorithm.cpp" line="58" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/test/testSteerAlgorithm.cpp" bodystart="58" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="test_steer_algorithm_8cpp_1a2e8c38dec883b8cfc46adb1e0cedb000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test/testSteerAlgorithm.cpp" line="68" column="1" bodyfile="test/testSteerAlgorithm.cpp" bodystart="68" bodyend="72"/>
+        <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/test/testSteerAlgorithm.cpp" line="69" column="1" bodyfile="/home/rajshinde/GMOCK/Robot_Controller_Module/test/testSteerAlgorithm.cpp" bodystart="69" bodyend="74"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -139,23 +139,26 @@
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><ref refid="test_steer_algorithm_8cpp_1a302ee9fe0ef08a6beaea103c911981ff" kindref="member">TEST</ref>(<ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref>,<sp/>testCorrRadius)<sp/>{</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref><sp/>tests;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">EXPECT_TRUE(tests.<ref refid="class_steer_algorithm_1a93cf1fc7d06376ddeaa4e81f2b0a22cc" kindref="member">setCorrRadius_</ref>(100));</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">EXPECT_LT(tests.<ref refid="class_steer_algorithm_1a06a7dd049280fab40d1b54c912daf399" kindref="member">getCorrRadius_</ref>(),<sp/>150);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">EXPECT_TRUE(tests.<ref refid="class_steer_algorithm_1a2314874a6f7252823e994e0e8b0a6b38" kindref="member">setCorrRadius</ref>(100));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">EXPECT_LT(tests.<ref refid="class_steer_algorithm_1a3ab412260c2457994f1180623862584b" kindref="member">getCorrRadius</ref>(),<sp/>150);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><ref refid="test_steer_algorithm_8cpp_1a302ee9fe0ef08a6beaea103c911981ff" kindref="member">TEST</ref>(<ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref>,<sp/>testwheel)<sp/>{</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref><sp/>tests;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">EXPECT_TRUE(tests.<ref refid="class_steer_algorithm_1ab251b6fd1f88fb7a526b0d55cd12625b" kindref="member">resetWheel</ref>());</highlight></codeline>
-<codeline lineno="61"><highlight class="normal">EXPECT_LT(tests.<ref refid="class_steer_algorithm_1a6067af69593713f561890ae8ad23f5ff" kindref="member">changeWheelAngles</ref>(10,<sp/>4,<sp/>8),<sp/>46);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><ref refid="test_steer_algorithm_8cpp_1a302ee9fe0ef08a6beaea103c911981ff" kindref="member">TEST</ref>(<ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref>,<sp/>testCalculations)<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref><sp/>tests;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal">EXPECT_LT(tests.<ref refid="class_steer_algorithm_1a17ff78af17e900f752237d274bcf751d" kindref="member">arcLength</ref>(360,<sp/>10),<sp/>70);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal">EXPECT_GT(tests.<ref refid="class_steer_algorithm_1aefdb433f65c47bf6e0d6af5de98c8f5a" kindref="member">turnTime</ref>(100,<sp/>20),<sp/>0);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>test<sp/>the<sp/>wheel<sp/>angles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">EXPECT_TRUE(tests.<ref refid="class_steer_algorithm_1ab251b6fd1f88fb7a526b0d55cd12625b" kindref="member">resetWheel</ref>());</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">EXPECT_LT(tests.<ref refid="class_steer_algorithm_1a6067af69593713f561890ae8ad23f5ff" kindref="member">changeWheelAngles</ref>(10,<sp/>4,<sp/>8),<sp/>46);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="test_steer_algorithm_8cpp_1a302ee9fe0ef08a6beaea103c911981ff" kindref="member">TEST</ref>(<ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref>,<sp/>testCalculations)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="class_steer_algorithm" kindref="compound">SteerAlgorithm</ref><sp/>tests;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>tet<sp/>the<sp/>ackermann<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">EXPECT_LT(tests.<ref refid="class_steer_algorithm_1a17ff78af17e900f752237d274bcf751d" kindref="member">arcLength</ref>(360,<sp/>10),<sp/>70);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">EXPECT_GT(tests.<ref refid="class_steer_algorithm_1aefdb433f65c47bf6e0d6af5de98c8f5a" kindref="member">turnTime</ref>(100,<sp/>20),<sp/>0);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="test/testSteerAlgorithm.cpp"/>
+    <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/test/testSteerAlgorithm.cpp"/>
   </compounddef>
 </doxygen>

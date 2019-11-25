@@ -1,0 +1,48 @@
+.TH "gnuplotio::IteratorRange< TI, TV >" 3 "Mon Nov 25 2019" "Version 7.0" "Robot Controller Module" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::IteratorRange< TI, TV > \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef boost::mpl::if_c< is_container, \fBError_InappropriateDeref\fP, TV >::type \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBArrayTraits\fP< TV >::range_type \fBsubiter_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIteratorRange\fP (const TI &_it, const TI &_end)"
+.br
+.ti -1c
+.RI "bool \fBis_end\fP () const "
+.br
+.ti -1c
+.RI "void \fBinc\fP ()"
+.br
+.ti -1c
+.RI "value_type \fBderef\fP () const "
+.br
+.ti -1c
+.RI "\fBsubiter_type\fP \fBderef_subiter\fP () const "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const bool \fBis_container\fP = \fBArrayTraits\fP<TV>::is_container"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

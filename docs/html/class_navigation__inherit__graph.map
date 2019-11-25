@@ -1,3 +1,4 @@
 <map id="Navigation" name="Navigation">
-<area shape="rect" id="node2" href="$class_steer_algorithm.html" title="Class SteerAlgorithm contains the methods of the Steering Algorithm. " alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node3" href="$class_mock_navigation.html" title="Mock Navigation class. " alt="" coords="5,155,121,181"/>
+<area shape="rect" id="node2" href="$class_steer_algorithm.html" title="Class SteerAlgorithm contains the methods of the Steering Algorithm. " alt="" coords="9,5,117,32"/>
 </map>

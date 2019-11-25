@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="dir_13e138d54eb8818da29c3992edef070a" kind="dir">
-    <compoundname>test</compoundname>
+    <compoundname>/home/rajshinde/GMOCK/Robot_Controller_Module/test</compoundname>
     <innerfile refid="test_2main_8cpp">main.cpp</innerfile>
+    <innerfile refid="test_mock_navigation_8cpp">testMockNavigation.cpp</innerfile>
     <innerfile refid="test_navigation_8cpp">testNavigation.cpp</innerfile>
     <innerfile refid="test_steer_algorithm_8cpp">testSteerAlgorithm.cpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="test/"/>
+    <location file="/home/rajshinde/GMOCK/Robot_Controller_Module/test/"/>
   </compounddef>
 </doxygen>

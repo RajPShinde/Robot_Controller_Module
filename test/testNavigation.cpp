@@ -47,6 +47,7 @@ OTHER DEALINGS IN THE SOFTWARE.
  */
 TEST(Navigation, testSetPid) {
 Navigation testn;
+// test if set methods return true
 EXPECT_TRUE(testn.setKp_(1));
 EXPECT_TRUE(testn.setKi_(1));
 EXPECT_TRUE(testn.setKd_(1));
@@ -58,6 +59,7 @@ EXPECT_TRUE(testn.setKd_(1));
  */
 TEST(Navigation, testGetPid) {
 Navigation testn;
+// test if get methods return value < 1
 EXPECT_LT(testn.getKp_(), 1);
 EXPECT_LT(testn.getKi_(), 1);
 EXPECT_LT(testn.getKd_(), 1);
@@ -70,6 +72,7 @@ EXPECT_LT(testn.getKd_(), 1);
  */
 TEST(Navigation, testConvergence) {
 Navigation testn;
+// test if convergence of calculate method
 ASSERT_NEAR(testn.calculate(0, 10, 40, 1), 40, 2);
 ASSERT_NEAR(testn.calculate(120, 10, 40, 0), 120, 1);
 }
@@ -80,6 +83,7 @@ ASSERT_NEAR(testn.calculate(120, 10, 40, 0), 120, 1);
  */
 TEST(Navigation, graphs) {
 Navigation tests;
+// test if graph are plotted
 std::vector<std::pair<double, double>> points;
 std::vector<std::pair<double, double>> pointsVelocity;
 pointsVelocity.push_back(std::make_pair((

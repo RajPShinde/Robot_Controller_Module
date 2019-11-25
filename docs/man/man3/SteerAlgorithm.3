@@ -1,4 +1,4 @@
-.TH "SteerAlgorithm" 3 "Mon Oct 21 2019" "Version 5" "Ackermann Steering Control" \" -*- nroff -*-
+.TH "SteerAlgorithm" 3 "Mon Nov 25 2019" "Version 7.0" "Robot Controller Module" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,11 +23,11 @@ Inherited by \fBNavigation\fP\&.
 .br
 .RI "\fIDestructor of class \fBSteerAlgorithm\fP\&. \fP"
 .ti -1c
-.RI "double \fBgetCorrRadius_\fP ()"
+.RI "double \fBgetCorrRadius\fP ()"
 .br
 .RI "\fIFunction to get corresponding radius in meters\&. \fP"
 .ti -1c
-.RI "bool \fBsetCorrRadius_\fP (double r)"
+.RI "bool \fBsetCorrRadius\fP (double r)"
 .br
 .RI "\fIFunction to set corresponding radius in meters\&. \fP"
 .ti -1c
@@ -37,7 +37,7 @@ Inherited by \fBNavigation\fP\&.
 .ti -1c
 .RI "double \fBchangeWheelAngles\fP (double corrRadius, double shaftLength, double shaftDistance)"
 .br
-.RI "\fIFunction to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servos\&. \fP"
+.RI "\fIFunction to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servo\&. \fP"
 .ti -1c
 .RI "bool \fBresetWheel\fP ()"
 .br
@@ -95,7 +95,7 @@ double arclength
 .SS "double SteerAlgorithm::changeWheelAngles (double corrRadius, double shaftLength, double shaftDistance)"
 
 .PP
-Function to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servos\&. 
+Function to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servo\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -112,7 +112,7 @@ double maxWheelAngle
 .RE
 .PP
 
-.SS "double SteerAlgorithm::getCorrRadius_ ()"
+.SS "double SteerAlgorithm::getCorrRadius ()"
 
 .PP
 Function to get corresponding radius in meters\&. 
@@ -144,7 +144,7 @@ bool true
 .RE
 .PP
 
-.SS "bool SteerAlgorithm::setCorrRadius_ (double r)"
+.SS "bool SteerAlgorithm::setCorrRadius (double r)"
 
 .PP
 Function to set corresponding radius in meters\&. 
@@ -181,4 +181,4 @@ double time
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Ackermann Steering Control from the source code\&.
+Generated automatically by Doxygen for Robot Controller Module from the source code\&.

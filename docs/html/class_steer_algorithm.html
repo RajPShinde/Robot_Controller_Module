@@ -4,18 +4,10 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Ackermann Steering Control: SteerAlgorithm Class Reference</title>
+<title>Robot Controller Module: SteerAlgorithm Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -31,8 +23,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Ackermann Steering Control
-   &#160;<span id="projectnumber">5</span>
+   <div id="projectname">Robot Controller Module
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -76,21 +68,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_steer_algorithm.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -105,6 +82,7 @@ $(document).ready(function(){initNavTree('class_steer_algorithm.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -124,9 +102,10 @@ Inheritance diagram for SteerAlgorithm:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_steer_algorithm__inherit__graph.png" border="0" usemap="#_steer_algorithm_inherit__map" alt="Inheritance graph"/></div>
 <map name="_steer_algorithm_inherit__map" id="_steer_algorithm_inherit__map">
-<area shape="rect" id="node2" href="class_navigation.html" title="Class Navigation Contains the methods of Pid Algorithm. " alt="" coords="17,80,101,107"/>
+<area shape="rect" id="node2" href="class_navigation.html" title="Class Navigation Contains the methods of steer Algorithm. " alt="" coords="21,80,105,107"/>
+<area shape="rect" id="node3" href="class_mock_navigation.html" title="Mock Navigation class. " alt="" coords="5,155,121,181"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -138,17 +117,17 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_steer_algorithm.html#a37dd2ef0ed856582aaacc103a6cd6700">~SteerAlgorithm</a> ()</td></tr>
 <tr class="memdesc:a37dd2ef0ed856582aaacc103a6cd6700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of class <a class="el" href="class_steer_algorithm.html" title="Class SteerAlgorithm contains the methods of the Steering Algorithm. ">SteerAlgorithm</a>. <br /></td></tr>
 <tr class="separator:a37dd2ef0ed856582aaacc103a6cd6700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06a7dd049280fab40d1b54c912daf399"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_steer_algorithm.html#a06a7dd049280fab40d1b54c912daf399">getCorrRadius_</a> ()</td></tr>
-<tr class="memdesc:a06a7dd049280fab40d1b54c912daf399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get corresponding radius in meters.  <a href="#a06a7dd049280fab40d1b54c912daf399">More...</a><br /></td></tr>
-<tr class="separator:a06a7dd049280fab40d1b54c912daf399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93cf1fc7d06376ddeaa4e81f2b0a22cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_steer_algorithm.html#a93cf1fc7d06376ddeaa4e81f2b0a22cc">setCorrRadius_</a> (double r)</td></tr>
-<tr class="memdesc:a93cf1fc7d06376ddeaa4e81f2b0a22cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to set corresponding radius in meters.  <a href="#a93cf1fc7d06376ddeaa4e81f2b0a22cc">More...</a><br /></td></tr>
-<tr class="separator:a93cf1fc7d06376ddeaa4e81f2b0a22cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab412260c2457994f1180623862584b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_steer_algorithm.html#a3ab412260c2457994f1180623862584b">getCorrRadius</a> ()</td></tr>
+<tr class="memdesc:a3ab412260c2457994f1180623862584b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get corresponding radius in meters.  <a href="#a3ab412260c2457994f1180623862584b">More...</a><br /></td></tr>
+<tr class="separator:a3ab412260c2457994f1180623862584b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2314874a6f7252823e994e0e8b0a6b38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_steer_algorithm.html#a2314874a6f7252823e994e0e8b0a6b38">setCorrRadius</a> (double r)</td></tr>
+<tr class="memdesc:a2314874a6f7252823e994e0e8b0a6b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to set corresponding radius in meters.  <a href="#a2314874a6f7252823e994e0e8b0a6b38">More...</a><br /></td></tr>
+<tr class="separator:a2314874a6f7252823e994e0e8b0a6b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17ff78af17e900f752237d274bcf751d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_steer_algorithm.html#a17ff78af17e900f752237d274bcf751d">arcLength</a> (double diffAngle, double corrRadius)</td></tr>
 <tr class="memdesc:a17ff78af17e900f752237d274bcf751d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to calculate the length of arc in meters to be traced in order to head in target direction.  <a href="#a17ff78af17e900f752237d274bcf751d">More...</a><br /></td></tr>
 <tr class="separator:a17ff78af17e900f752237d274bcf751d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6067af69593713f561890ae8ad23f5ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_steer_algorithm.html#a6067af69593713f561890ae8ad23f5ff">changeWheelAngles</a> (double corrRadius, double shaftLength, double shaftDistance)</td></tr>
-<tr class="memdesc:a6067af69593713f561890ae8ad23f5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servos.  <a href="#a6067af69593713f561890ae8ad23f5ff">More...</a><br /></td></tr>
+<tr class="memdesc:a6067af69593713f561890ae8ad23f5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servo.  <a href="#a6067af69593713f561890ae8ad23f5ff">More...</a><br /></td></tr>
 <tr class="separator:a6067af69593713f561890ae8ad23f5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab251b6fd1f88fb7a526b0d55cd12625b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_steer_algorithm.html#ab251b6fd1f88fb7a526b0d55cd12625b">resetWheel</a> ()</td></tr>
 <tr class="memdesc:ab251b6fd1f88fb7a526b0d55cd12625b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to set wheel angles to 0.  <a href="#ab251b6fd1f88fb7a526b0d55cd12625b">More...</a><br /></td></tr>
@@ -247,7 +226,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dir</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servos. </p>
+<p>Function to calculate the angles in degrees for left and right wheels as per ackermann model, and then feed them to corresponding servo. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">double</td><td>corrRadius, corresponding radius </td></tr>
@@ -260,12 +239,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dir</b></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a06a7dd049280fab40d1b54c912daf399"></a>
+<a class="anchor" id="a3ab412260c2457994f1180623862584b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double SteerAlgorithm::getCorrRadius_ </td>
+          <td class="memname">double SteerAlgorithm::getCorrRadius </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -308,12 +287,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dir</b></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a93cf1fc7d06376ddeaa4e81f2b0a22cc"></a>
+<a class="anchor" id="a2314874a6f7252823e994e0e8b0a6b38"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool SteerAlgorithm::setCorrRadius_ </td>
+          <td class="memname">bool SteerAlgorithm::setCorrRadius </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>r</em></td><td>)</td>
@@ -370,19 +349,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dir</b></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_steer_algorithm_8hpp_source.html">SteerAlgorithm.hpp</a></li>
-<li>app/<a class="el" href="_steer_algorithm_8cpp.html">SteerAlgorithm.cpp</a></li>
+<li>/home/rajshinde/GMOCK/Robot_Controller_Module/include/<a class="el" href="_steer_algorithm_8hpp_source.html">SteerAlgorithm.hpp</a></li>
+<li>/home/rajshinde/GMOCK/Robot_Controller_Module/app/<a class="el" href="_steer_algorithm_8cpp.html">SteerAlgorithm.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_steer_algorithm.html">SteerAlgorithm</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
 </body>
 </html>
