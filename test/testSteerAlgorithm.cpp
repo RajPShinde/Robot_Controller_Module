@@ -46,8 +46,8 @@ OTHER DEALINGS IN THE SOFTWARE.
  */
 TEST(SteerAlgorithm, testCorrRadius) {
 SteerAlgorithm tests;
-EXPECT_TRUE(tests.setCorrRadius_(100));
-EXPECT_LT(tests.getCorrRadius_(), 150);
+EXPECT_TRUE(tests.setCorrRadius(100));
+EXPECT_LT(tests.getCorrRadius(), 150);
 }
 
 /**
@@ -70,4 +70,5 @@ SteerAlgorithm tests;
 EXPECT_LT(tests.arcLength(360, 10), 70);
 EXPECT_GT(tests.turnTime(100, 20), 0);
 }
+
 

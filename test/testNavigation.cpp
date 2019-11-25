@@ -73,3 +73,22 @@ Navigation testn;
 ASSERT_NEAR(testn.calculate(0, 10, 40, 1), 40, 2);
 ASSERT_NEAR(testn.calculate(120, 10, 40, 0), 120, 1);
 }
+
+/**
+ *  @brief Test to check the functions arclength 
+ *  and turnTime provide right length and time values
+ */
+TEST(Navigation, graphs) {
+Navigation tests;
+std::vector<std::pair<double, double>> points;
+std::vector<std::pair<double, double>> pointsVelocity;
+pointsVelocity.push_back(std::make_pair((
+                          static_cast<double> (clock())/CLOCKS_PER_SEC),
+                          10));
+points.push_back(std::make_pair((
+                          static_cast<double> (clock())/CLOCKS_PER_SEC),
+                          10));
+EXPECT_TRUE(tests.drawGraph(points, pointsVelocity, 20, 30));
+EXPECT_TRUE(tests.display(0, 0, 10, 20, 7));
+EXPECT_TRUE(tests.setupGraph());
+}
