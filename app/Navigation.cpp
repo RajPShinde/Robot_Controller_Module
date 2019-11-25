@@ -31,14 +31,14 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @section Implements Ackermann on PID control
  */
 #include <time.h>
+#include <../include/gnuplot-iostream.h>
 
 #include <iostream>
 #include <fstream>
 #include <vector>
 
-#include "gnuplot-iostream.h"
-#include "Navigation.hpp"
-#include "SteerAlgorithm.hpp"
+#include <Navigation.hpp>
+#include <SteerAlgorithm.hpp>
 
 Navigation::Navigation() {
 //  Initialised Variables
@@ -151,7 +151,8 @@ while(velocityConverged != 1 && headingConverged != 1) {
                   (static_cast<double> (clock())/CLOCKS_PER_SEC),
                     heading));
                 if (flag == 2) {
-                display(2, currentVelocity, newVelocity, heading, targetHeading);
+                display(2, currentVelocity, newVelocity, heading,
+                        targetHeading);
                 }
           }
         targetHeading = 0;
@@ -197,21 +198,23 @@ gnup << "set ylabel \"Current Velocity\"\n";
 gnup << "set key outside\n";
 return true;
 }
-
-bool Navigation::display(int loc, double currentVelocity, double newVelocity, double heading, double targetHeading) {
-if(loc == 1) {
+bool Navigation::display(int loc, double currentVelocity,
+  double newVelocity, double heading, double targetHeading) {
+if (loc == 1) {
 std::cout << "Current Velocity: " << currentVelocity
                   << " Setpoint: " << newVelocity << std::endl;
-} else if (loc == 2)
+} else if (loc == 2) {
 std::cout << "Current Velocity: " << currentVelocity
           << " Setpoint: " << newVelocity << std::endl;
 std::cout << "Current Heading: " << heading
           << " Target: " << targetHeading << std::endl;
+}
 return true;
 }
 
 bool Navigation::drawGraph(std::vector<std::pair<double, double>> points,
-std::vector<std::pair<double, double>> pointsVelocity, double newVelocity, double tempHeading) {
+  std::vector<std::pair<double, double>> pointsVelocity, double newVelocity,
+double tempHeading) {
 //  call object and intialise variables for Graph in GNUPLOT
 Gnuplot gnu;
 Gnuplot gnup;

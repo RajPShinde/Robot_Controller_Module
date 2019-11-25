@@ -29,8 +29,8 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @section Mocked navigation class
  */
 
-#ifndef INCLUDE_MOCKNAVIGATION_H_
-#define INCLUDE_MOCKNAVIGATION_H_
+#ifndef INCLUDE_MOCKNAVIGATION_HPP_
+#define INCLUDE_MOCKNAVIGATION_HPP_
 
 #include <gmock/gmock.h>
 #include <vector>
@@ -60,7 +60,6 @@ class MockNavigation: public Navigation{
                                     double currentVelocity,
                                     double setPoint,
                                     int flag));
-   
 };
 
-#endif  // INCLUDE_MOCKNAVIGATION_H_
+#endif  // INCLUDE_MOCKNAVIGATION_HPP_

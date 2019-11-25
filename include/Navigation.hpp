@@ -35,7 +35,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 #include <vector>
 
-#include "SteerAlgorithm.hpp"
+#include <SteerAlgorithm.hpp>
 
 /**
  *  @brief Class Navigation 
@@ -87,7 +87,8 @@ class Navigation : public SteerAlgorithm {
     *  @param targetHeading
     *  @return none
     */
-    bool display(int loc, double currentVelocity, double newVelocity, double heading, double targetHeading);
+    bool display(int loc, double currentVelocity, double newVelocity,
+                 double heading, double targetHeading);
 
      /**
     *  @brief Function to draw graphs in gnuplot
@@ -95,7 +96,8 @@ class Navigation : public SteerAlgorithm {
     *  @return none
     */
     bool drawGraph(std::vector<std::pair<double, double>> points,
-std::vector<std::pair<double, double>> pointsVelocity, double newVelocity, double tempHeading);
+std::vector<std::pair<double, double>> pointsVelocity, double newVelocity,
+double tempHeading);
 
    /**
     *  @brief Function to get kp_
