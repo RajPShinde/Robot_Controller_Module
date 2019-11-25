@@ -30,10 +30,11 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @section Header file for Navigation through PID control
  */
 
-#ifndef INCLUDE_NAVIGATION_HPP_
-#define INCLUDE_NAVIGATION_HPP_
+#ifndef ROBOT_CONTROLLER_MODULE_INCLUDE_NAVIGATION_HPP_
+#define ROBOT_CONTROLLER_MODULE_INCLUDE_NAVIGATION_HPP_
 
 #include <vector>
+#include <utility>
 
 #include <SteerAlgorithm.hpp>
 
@@ -145,4 +146,4 @@ double tempHeading);
      bool setKd_(double kd);
 };
 
-#endif  // INCLUDE_NAVIGATION_HPP_
+#endif  // ROBOT_CONTROLLER_MODULE_INCLUDE_NAVIGATION_HPP_

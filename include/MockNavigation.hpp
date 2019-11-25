@@ -29,8 +29,8 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @section Mocked navigation class
  */
 
-#ifndef INCLUDE_MOCKNAVIGATION_HPP_
-#define INCLUDE_MOCKNAVIGATION_HPP_
+#ifndef ROBOT_CONTROLLER_MODULE_INCLUDE_MOCKNAVIGATION_HPP_
+#define ROBOT_CONTROLLER_MODULE_INCLUDE_MOCKNAVIGATION_HPP_
 
 #include <gmock/gmock.h>
 #include <vector>
@@ -62,4 +62,4 @@ class MockNavigation: public Navigation{
                                     int flag));
 };
 
-#endif  // INCLUDE_MOCKNAVIGATION_HPP_
+#endif  // ROBOT_CONTROLLER_MODULE_INCLUDE_MOCKNAVIGATION_HPP_

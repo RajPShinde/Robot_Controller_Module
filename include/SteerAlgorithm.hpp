@@ -30,8 +30,8 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @section Ackermann Steering Control Header file
  */
 
-#ifndef INCLUDE_STEERALGORITHM_HPP_
-#define INCLUDE_STEERALGORITHM_HPP_
+#ifndef ROBOT_CONTROLLER_MODULE_INCLUDE_STEERALGORITHM_HPP_
+#define ROBOT_CONTROLLER_MODULE_INCLUDE_STEERALGORITHM_HPP_
 
 /**
  *  @brief Class SteerAlgorithm
@@ -112,4 +112,4 @@ class SteerAlgorithm {
     */
     double turnTime(double arclength, double newVelocity);
 };
-#endif  // INCLUDE_STEERALGORITHM_HPP_
+#endif  // ROBOT_CONTROLLER_MODULE_INCLUDE_STEERALGORITHM_HPP_
