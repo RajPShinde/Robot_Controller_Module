@@ -1,6 +1,6 @@
 # Robot Controller Module
 [![Build Status](https://travis-ci.org/RajPShinde/Robot_Controller_Module.svg?branch=master)](https://travis-ci.org/RajPShinde/Robot_Controller_Module)
-[![Coverage Status](https://coveralls.io/repos/github/RajPShinde/Robot_Controller_Module/badge.svg?branch=master&service=github)](https://coveralls.io/github/RajPShinde/Robot_Controller_Module?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/RajPShinde/Robot_Controller_Module/badge.svg?branch=GMock_Extra_Credit&service=github)](https://coveralls.io/github/RajPShinde/Robot_Controller_Module?branch=GMock_Extra_Credit)
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/RajPShinde/Robot_Controller_Module/blob/master/LICENSE)
 [![Documentation](https://img.shields.io/badge/docs-generated-brightgreen.svg)](https://github.com/RajPShinde/Robot_Controller_Module/tree/master/docs)
 ---
@@ -65,6 +65,13 @@ make
 #### Run Test
 ```
 ./test/cpp-test
+```
+## Gererate Doxygen docs
+In a new terminal
+```
+sudo apt-get install doxygen
+sudo apt install doxygen-gui
+doxywizard
 ```
 ## Demo
 Run the program. Once the velocity and heading converge to the target then graphs will be displayed as below. Also, converged values will be shown in the terminal.
