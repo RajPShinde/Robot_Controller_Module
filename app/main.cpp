@@ -28,7 +28,7 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @file    main.cpp
  *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
  *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
- *  @date    10/10/2019
+ *  @date    11/24/2019
  *  @version 6.0
  *  @brief   Mid Term Project
  *  @section Graphical demo of Ackermann Steering on PID Control
@@ -40,7 +40,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 #include "SteerAlgorithm.hpp"
 
 /**
- *  @brief  Main Function to call the methods and show demostration
+ *  @brief  Main Function to call the methods and show demo
  *  @param  None
  *  @return 0
  */

@@ -40,7 +40,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 class SteerAlgorithm {
  private:
   const double wheelCircumference_ = 2;
-  double lWheelAngle_, rWheelAngle_, robotAngle_, corrRadius_;
+  double lWheelAngle_, rWheelAngle_, corrRadius_;
 
  public:
     const double shaftLength = 4;
@@ -64,14 +64,14 @@ class SteerAlgorithm {
     *  @param none
     *  @return double corresponding radius
     */
-    double getCorrRadius_();
+    double getCorrRadius();
 
    /**
     *  @brief Function to set corresponding radius in meters
     *  @param double radius
     *  @return bool true
     */
-    bool setCorrRadius_(double r);
+    bool setCorrRadius(double r);
 
    /**
     *  @brief Function to calculate the length of arc in meters
@@ -86,7 +86,7 @@ class SteerAlgorithm {
    /**
     *  @brief Function to calculate the angles in degrees for left and
     *  right wheels as per ackermann model, and then feed them
-    *  to corresponding servos
+    *  to corresponding servo
     *  @param double corrRadius, corresponding radius
     *  @param double shaftLength, length between wheels
     *  @param double shafDistance, distance between rear and

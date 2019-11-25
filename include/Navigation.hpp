@@ -24,7 +24,7 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @file    Navigation.hpp
  *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
  *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
- *  @date    10/10/2019
+ *  @date    11/24/2019
  *  @version 6.0
  *  @brief   Mid Term Project
  *  @section Header file for Navigation through PID control
@@ -32,6 +32,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 #ifndef INCLUDE_NAVIGATION_HPP_
 #define INCLUDE_NAVIGATION_HPP_
+
+#include <vector>
 
 #include "SteerAlgorithm.hpp"
 
@@ -68,6 +70,32 @@ class Navigation : public SteerAlgorithm {
    */
     double calculate(double targetHeading, double currentVelocity,
                      double setPoint, int flag);
+
+   /**
+    *  @brief Function to set graph parameters
+    *  @param none
+    *  @return none
+    */
+    bool setupGraph();
+
+   /**
+    *  @brief Function to display on Terminal
+    *  @param loc
+    *  @param currentVelocity
+    *  @param newVelocity
+    *  @param heading
+    *  @param targetHeading
+    *  @return none
+    */
+    bool display(int loc, double currentVelocity, double newVelocity, double heading, double targetHeading);
+
+     /**
+    *  @brief Function to draw graphs in gnuplot
+    *  @param none
+    *  @return none
+    */
+    bool drawGraph(std::vector<std::pair<double, double>> points,
+std::vector<std::pair<double, double>> pointsVelocity, double newVelocity, double tempHeading);
 
    /**
     *  @brief Function to get kp_

@@ -25,7 +25,7 @@ OTHER DEALINGS IN THE SOFTWARE.
  *  @file    Navigation.cpp
  *  @author  Sprint-1 Raj Shinde- driver and Prasheel Renkuntla- navigator
  *  @author  Sprint-2 Prasheel Renkuntla- driver and Raj Shinde- navigator
- *  @date    10/10/2019
+ *  @date    11/24/2019
  *  @version 6.0
  *  @brief   Mid Term Project
  *  @section Implements Ackermann on PID control
@@ -40,9 +40,6 @@ OTHER DEALINGS IN THE SOFTWARE.
 #include "Navigation.hpp"
 #include "SteerAlgorithm.hpp"
 
-/**
- *  @brief Constructor of class SteerAlgorithm
- */
 Navigation::Navigation() {
 //  Initialised Variables
 kp_ = 0.5;
@@ -53,20 +50,8 @@ error_ = 0;
 previousError_ = 0;
 }
 
-/**
- *  @brief Destructor of class SteerAlgorithm
- */
 Navigation::~Navigation() {}
 
-/**
-*  @brief Function to calculate new velocity in m/s with a PID 
-*  Algorithm using kp, ki & kd
-*  @param double targetHeading, Target heading of the robot
-*  @param double currentVelocity, current velocity of robot
-*  @param double setPoint, Target Velocity
-*  @param int flag, to enable while
-*  @return double newVelocity
-*/
 double Navigation::calculate(double targetHeading,
                              double currentVelocity,
                              double setPoint,
@@ -87,28 +72,10 @@ SteerAlgorithm Ackermann = SteerAlgorithm();
 
 double tempHeading = targetHeading;      //  to store the target for graph
 
-//  call object and intialise variables for Graph in GNUPLOT
-Gnuplot gnu;
-Gnuplot gnup;
-
 std::vector<std::pair<double, double>> combinedXY(1, std::make_pair(0, 0));
 std::vector<std::pair<double, double>> points;
 std::vector<std::pair<double, double>> pointsVelocity;
 
-//  set the graph on gnuplot for the respective coordinates
-gnu << "set xrange [0:2]\nset yrange [0:100]\n";
-gnu << "set title \"Steering angle Convergence\"\n";
-gnu << "set pointsize 1\n";
-gnu << "set xlabel \"Time\"\n";
-gnu << "set ylabel \"Heading Angle\"\n";
-gnu << "set key outside\n";
-
-gnup << "set xrange [0:0.17]\nset yrange [0:45]\n";
-gnup << "set title \"Velocity Convergence\"\n";
-gnup << "set pointsize 1\n";
-gnup << "set xlabel \"Time\"\n";
-gnup << "set ylabel \"Current Velocity\"\n";
-gnup << "set key outside\n";
 //  while loop to run until velocity and heading are converged
 while(velocityConverged != 1 && headingConverged != 1) {
         //  Run PID control initially
@@ -129,12 +96,11 @@ while(velocityConverged != 1 && headingConverged != 1) {
 
         //  store the current values in a vector for plotting
         pointsVelocity.push_back(std::make_pair((
-                                 static_cast<double> (toc)/CLOCKS_PER_SEC),
-                                 currentVelocity));
+                          static_cast<double> (clock())/CLOCKS_PER_SEC),
+                          currentVelocity));
         if (flag == 2) {
         //  show the values on screen
-        std::cout << "Current Velocity: " << currentVelocity
-                  << " Setpoint: " << newVelocity << std::endl;
+        display(1, currentVelocity, newVelocity, heading, targetHeading);
         }
         if (setPoint == newVelocity) {
            velocityConverged = 1;
@@ -150,12 +116,12 @@ while(velocityConverged != 1 && headingConverged != 1) {
              dir = -1;
           }
           //  change wheel angles to move robot towards target
-          Ackermann.changeWheelAngles(Ackermann.getCorrRadius_(),
+          Ackermann.changeWheelAngles(Ackermann.getCorrRadius(),
                                       shaftLength,
                                       shaftDistance);
 
           double arcLen = Ackermann.arcLength(targetHeading,
-                                      Ackermann.getCorrRadius_());
+                                      Ackermann.getCorrRadius());
           auto turnTime = Ackermann.turnTime(arcLen, newVelocity);
           clock_t tic = clock();
 
@@ -182,13 +148,10 @@ while(velocityConverged != 1 && headingConverged != 1) {
 
                 //  store the current values in a vector for plotting
                 points.push_back(std::make_pair(
-                                  (static_cast<double> (toc)/CLOCKS_PER_SEC),
-                                   heading));
+                  (static_cast<double> (clock())/CLOCKS_PER_SEC),
+                    heading));
                 if (flag == 2) {
-                std::cout << "Current Velocity: " << currentVelocity
-                          << " Setpoint: " << newVelocity << std::endl;
-                std::cout << "Current Heading: " << heading
-                          << " Target: " << targetHeading << std::endl;
+                display(2, currentVelocity, newVelocity, heading, targetHeading);
                 }
           }
         targetHeading = 0;
@@ -197,12 +160,7 @@ while(velocityConverged != 1 && headingConverged != 1) {
         }
 }
 if (flag == 2) {
-  //  Plot the graph on gnuplot by calling the below lines
-  gnu << "plot" << gnu.file1d(points) << "with points title 'Heading' lc 3, "
-      << tempHeading << " title 'Target Heading' lt 1 lc 4" << std::endl;
-  gnup << "plot" << gnup.file1d(pointsVelocity)
-       << "with lp title 'Current Velocity' lc 3, "
-       << newVelocity << " title 'Set Point' lt 1 lc 4" << std::endl;
+drawGraph(points, pointsVelocity, newVelocity, tempHeading);
 return 0;
 } else if (flag == 1) {
   return newVelocity;
@@ -218,38 +176,67 @@ derOutput = 0;
 return newVelocity;
 }
 
-/**
- *  @brief Function to get kp_
- *  @param none
- *  @return double
- */
+bool Navigation::setupGraph() {
+//  call object and intialise variables for Graph in GNUPLOT
+Gnuplot gnu;
+Gnuplot gnup;
+
+//  set the graph on gnuplot for the respective coordinates
+gnu << "set xrange [0:2]\nset yrange [0:100]\n";
+gnu << "set title \"Steering angle Convergence\"\n";
+gnu << "set pointsize 1\n";
+gnu << "set xlabel \"Time\"\n";
+gnu << "set ylabel \"Heading Angle\"\n";
+gnu << "set key outside\n";
+
+gnup << "set xrange [0:0.17]\nset yrange [0:45]\n";
+gnup << "set title \"Velocity Convergence\"\n";
+gnup << "set pointsize 1\n";
+gnup << "set xlabel \"Time\"\n";
+gnup << "set ylabel \"Current Velocity\"\n";
+gnup << "set key outside\n";
+return true;
+}
+
+bool Navigation::display(int loc, double currentVelocity, double newVelocity, double heading, double targetHeading) {
+if(loc == 1) {
+std::cout << "Current Velocity: " << currentVelocity
+                  << " Setpoint: " << newVelocity << std::endl;
+} else if (loc == 2)
+std::cout << "Current Velocity: " << currentVelocity
+          << " Setpoint: " << newVelocity << std::endl;
+std::cout << "Current Heading: " << heading
+          << " Target: " << targetHeading << std::endl;
+return true;
+}
+
+bool Navigation::drawGraph(std::vector<std::pair<double, double>> points,
+std::vector<std::pair<double, double>> pointsVelocity, double newVelocity, double tempHeading) {
+//  call object and intialise variables for Graph in GNUPLOT
+Gnuplot gnu;
+Gnuplot gnup;
+
+  //  Plot the graph on gnuplot by calling the below line
+  gnu << "plot" << gnu.file1d(points) << "with points title 'Heading' lc 3, "
+      << tempHeading << " title 'Target Heading' lt 1 lc 4" << std::endl;
+  gnup << "plot" << gnup.file1d(pointsVelocity)
+       << "with lp title 'Current Velocity' lc 3, "
+       << newVelocity << " title 'Set Point' lt 1 lc 4" << std::endl;
+return true;
+}
+
 double Navigation::getKp_() {
 return kp_;
 }
 
-/**
- *  @brief Function to get ki_
- *  @param none
- *  @return double 
- */
 double Navigation::getKi_() {
 return ki_;
 }
 
-/**
- *  @brief Function to get kd_
- *  @param none
- *  @return double 
- */
 double Navigation::getKd_() {
 return kd_;
 }
 
-/**
- *  @brief Function to set kp_
- *  @param double kp
- *  @return boolean true
- */
 bool Navigation::setKp_(double kp) {
 bool flag = true;
 kp_ = kp;
@@ -259,11 +246,6 @@ if (kp_ != kp) {
 return flag;
 }
 
-/**
- *  @brief Function to set ki_
- *  @param double ki
- *  @return boolean true
- */
 bool Navigation::setKi_(double ki) {
 bool flag = true;
 ki_ = ki;
@@ -273,11 +255,6 @@ if (ki_ != ki) {
 return flag;
 }
 
-/**
- *  @brief Function to set kd_
- *  @param double kd
- *  @return boolean true
- */
 bool Navigation::setKd_(double kd) {
 bool flag = true;
 kd_ = kd;
