@@ -50,7 +50,7 @@ sudo apt-get install libboost-all-dev
 
 ## Build
 ```
-git clone --recursive https://github.com/RajPShinde/Robot_Controller_Module.git
+git clone --single-branch --branch GMock_Extra_Credit https://github.com/RajPShinde/Robot_Controller_Module
 cd <path to repository>
 mkdir build
 cd build
